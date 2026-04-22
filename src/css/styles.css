@@ -31,7 +31,9 @@ body {
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    justify-content: space-evenly; /* 🔥 requerido */
+    align-items: center;
+    width: 100%;
 }
 
 .nav-links a {
@@ -71,6 +73,7 @@ body {
     background: #020617;
     padding: 20px;
     border-radius: 10px;
+    border: 1px solid #1e293b;
 }
 
 /* SKILLS */
@@ -86,10 +89,10 @@ body {
     border-radius: 20px;
 }
 
-/* PROYECTOS */
+/* PROYECTOS (GRID) */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 🔥 requerido */
     gap: 20px;
 }
 
@@ -116,6 +119,19 @@ body {
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 10px;
+}
+
+/* GALERÍA FLEXBOX (🔥 TASK 4) */
+.gallery-flex {
+    display: flex;
+    flex-wrap: wrap; /* 🔥 requerido */
+    gap: 20px;
+    justify-content: center;
+}
+
+.gallery-flex .project-card {
+    flex: 1 1 250px;
+    max-width: 300px;
 }
 
 /* FORMULARIO */
