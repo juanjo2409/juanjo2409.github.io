@@ -29,7 +29,7 @@ body {
 }
 
 /* =========================
-   NAVBAR (FLEXBOX)
+   NAVBAR
 ========================= */
 .navbar {
     display: flex;
@@ -63,67 +63,66 @@ body {
 ========================= */
 .hero {
     text-align: center;
-    padding: 80px 20px;
+    padding: 60px 20px;
 }
 
 .hero h2 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
 }
 
 .hero p {
     color: var(--muted);
 }
 
-/* BOTÓN */
-.btn {
-    margin-top: 15px;
-    padding: 10px 20px;
-    background: var(--primary);
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
 /* =========================
-   SECCIONES
+   GALERÍA (SOLO 3 MASCOTAS)
 ========================= */
-.section {
-    padding: 60px 40px;
-    max-width: 1100px;
-    margin: auto;
+.gallery-flex {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    padding: 40px;
 }
 
 /* =========================
-   CARD
+   RECUADRO (CARD BONITA)
 ========================= */
 .card {
     background: var(--card);
+    border: 1px solid #1e293b;
+    border-radius: 15px;
     padding: 20px;
+    width: 280px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary);
+}
+
+/* IMAGEN */
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
     border-radius: 10px;
+    margin-bottom: 15px;
 }
 
-/* =========================
-   GRID PROYECTOS
-========================= */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+/* TITULO */
+.card h3 {
+    color: var(--primary);
+    margin-bottom: 8px;
 }
 
-/* =========================
-   FORMULARIO
-========================= */
-.formulario {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-input, textarea {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
+/* DESCRIPCIÓN */
+.card p {
+    color: var(--muted);
+    font-size: 0.95rem;
 }
 
 /* =========================
@@ -133,34 +132,19 @@ footer {
     text-align: center;
     padding: 20px;
     background: var(--card);
+    margin-top: 40px;
 }
 
 /* =========================
    RESPONSIVE
 ========================= */
 @media (max-width: 768px) {
-
-    .navbar {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .nav-links {
+    .gallery-flex {
         flex-direction: column;
         align-items: center;
     }
 
-    .grid {
-        grid-template-columns: 1fr;
-    }
-
-    .hero h2 {
-        font-size: 2rem;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-    .grid {
-        grid-template-columns: repeat(2, 1fr);
+    .card {
+        width: 90%;
     }
 }

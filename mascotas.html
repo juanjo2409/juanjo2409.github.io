@@ -1,82 +1,58 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mis Mascotas</title>
-    <link rel="stylesheet" href="src/css/styles.css">
+    <link rel="stylesheet" href="src/css/mascotas.css">
 </head>
+
 <body>
 
-    <header class="navbar">
-        <h1 class="logo">Mis Mascotas</h1>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="index.html#proyectos">Proyectos</a></li>
-                <li><a href="index.html#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+<header class="navbar">
+    <h1 class="logo">Mascotas</h1>
 
-    <main>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#proyectos">Proyectos</a></li>
+            <li><a href="index.html#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
 
-        <section class="hero">
-            <h2>Mis compañeros de vida</h2>
-            <p>Galería creada con Flexbox y CSS Grid</p>
-        </section>
+<section class="hero">
+    <h2>Mis compañeros de vida 🐾</h2>
+    <p>Pequeños amigos que hacen cada día más especial</p>
+</section>
 
-        <section class="section">
-            <h2>Galería</h2>
+<!-- SOLO 3 MASCOTAS -->
+<section class="gallery-flex">
 
-            <!-- 🔥 FLEXBOX -->
-            <div class="gallery-flex">
+    <div class="card">
+        <img src="public/img/images.jpeg" alt="Max">
+        <h3>Max</h3>
+        <p>Un perro alegre y leal que siempre llena la casa de energía y felicidad.</p>
+    </div>
 
-                <div class="project-card">
-                    <img src="public/img/perro1.jpg" alt="Perro">
-                    <h3>Max</h3>
-                    <p>Muy juguetón.</p>
-                </div>
+    <div class="card">
+        <img src="public/img/gato.avif" alt="Luna">
+        <h3>Luna</h3>
+        <p>Una gatita tranquila y curiosa que disfruta dormir bajo el sol.</p>
+    </div>
 
-                <div class="project-card">
-                    <img src="public/img/gato1.jpg" alt="Gato">
-                    <h3>Luna</h3>
-                    <p>Tranquila.</p>
-                </div>
+    <div class="card">
+        <img src="public/img/leon.jpeg" alt="Chispas">
+        <h3>Chispas</h3>
+        <p>Pequeño, juguetón y lleno de vida, siempre listo para la aventura.</p>
+    </div>
 
-                <div class="project-card">
-                    <img src="public/img/perro2.jpg" alt="Perro">
-                    <h3>Rocky</h3>
-                    <p>Leal.</p>
-                </div>
+</section>
 
-                <div class="project-card">
-                    <img src="public/img/gato2.jpg" alt="Gato">
-                    <h3>Milo</h3>
-                    <p>Curioso.</p>
-                </div>
-
-                <div class="project-card">
-                    <img src="public/img/perro3.jpg" alt="Perro">
-                    <h3>Toby</h3>
-                    <p>Amigable.</p>
-                </div>
-
-                <div class="project-card">
-                    <img src="public/img/gato3.jpg" alt="Gato">
-                    <h3>Nina</h3>
-                    <p>Dormilona.</p>
-                </div>
-
-            </div>
-
-        </section>
-
-    </main>
-
-    <footer>
-        <p>© 2026 Juan José Maldonado</p>
-    </footer>
+<footer>
+    <p>© 2026 Juan José Maldonado</p>
+</footer>
 
 </body>
 </html>
