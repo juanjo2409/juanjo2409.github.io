@@ -43,6 +43,15 @@ body {
     color: var(--primary);
 }
 
+.perfil {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #00bcd4;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
 .nav-links {
     display: flex;
     gap: 20px;

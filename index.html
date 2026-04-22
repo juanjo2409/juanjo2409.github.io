@@ -10,96 +10,99 @@
 
 <body>
 
-<header class="navbar">
-    <h1 class="logo">JC</h1>
+    <header class="navbar">
+        <h1 class="logo">JC</h1>
 
-    <nav>
-        <ul class="nav-links">
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#sobre">Quien Soy</a></li>
-            <li><a href="#proyectos">Portafolio</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-            <li><a href="mascotas.html">Mascotas</a></li>
-        </ul>
-    </nav>
-</header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre">Quien Soy</a></li>
+                <li><a href="#proyectos">Portafolio</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="mascotas.html">Mascotas</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<!-- HERO -->
-<section class="hero" id="inicio">
+    <!-- HERO -->
+    <section class="hero" id="inicio">
 
-    <div class="hero-container">
+        <div class="hero-container">
 
-        <div class="hero-text">
-            <h2>I'm Juan José</h2>
+            <div class="hero-image">
+                <img src="public/img/foto.jpeg" alt="Perfil" class="perfil">
+            </div>
 
-            <p id="texto">
-                Desarrollador en formación apasionado por crear soluciones digitales modernas y eficientes.
+            <div class="hero-text">
+                <h2>I'm Juan José</h2>
+
+                <p id="texto">
+                    Desarrollador en formación apasionado por crear soluciones digitales modernas y eficientes.
+                </p>
+
+                <button class="btn" id="btn">Cambiar texto</button>
+            </div>
+
+
+
+        </div>
+
+    </section>
+
+    <!-- SOBRE MI -->
+    <section class="section" id="sobre">
+        <h2>Quién Soy</h2>
+
+        <div class="card">
+            <p>
+                Soy estudiante de Análisis y Desarrollo de Software en el SENA, apasionado por el desarrollo web,
+                el aprendizaje continuo y la creación de soluciones digitales.
             </p>
-
-            <button class="btn" id="btn">Cambiar texto</button>
         </div>
+    </section>
 
-        <div class="hero-image">
-            <img src="public/img/perfil.jpg" alt="Foto de perfil">
+    <!-- PROYECTOS -->
+    <section class="section" id="proyectos">
+        <h2>Portafolio</h2>
+
+        <div class="grid">
+
+            <div class="card">
+                <h3>Sistema Inventario</h3>
+                <p>Proyecto en Python para gestión de productos.</p>
+            </div>
+
+            <div class="card">
+                <h3>Gestión Tareas</h3>
+                <p>App para organizar actividades.</p>
+            </div>
+
+            <div class="card">
+                <h3>Mascotas Web</h3>
+                <p>Galería usando Flexbox y Grid.</p>
+            </div>
+
         </div>
+    </section>
 
-    </div>
+    <!-- CONTACTO -->
+    <section class="section" id="contacto">
+        <h2>Contacto</h2>
 
-</section>
+        <form class="formulario">
+            <input type="text" placeholder="Nombre">
+            <input type="email" placeholder="Email">
+            <textarea placeholder="Mensaje"></textarea>
+            <button class="btn">Enviar</button>
+        </form>
+    </section>
 
-<!-- SOBRE MI -->
-<section class="section" id="sobre">
-    <h2>Quién Soy</h2>
+    <footer>
+        <p>© 2026 Juan José Maldonado</p>
+    </footer>
 
-    <div class="card">
-        <p>
-            Soy estudiante de Análisis y Desarrollo de Software en el SENA, apasionado por el desarrollo web,
-            el aprendizaje continuo y la creación de soluciones digitales.
-        </p>
-    </div>
-</section>
-
-<!-- PROYECTOS -->
-<section class="section" id="proyectos">
-    <h2>Portafolio</h2>
-
-    <div class="grid">
-
-        <div class="card">
-            <h3>Sistema Inventario</h3>
-            <p>Proyecto en Python para gestión de productos.</p>
-        </div>
-
-        <div class="card">
-            <h3>Gestión Tareas</h3>
-            <p>App para organizar actividades.</p>
-        </div>
-
-        <div class="card">
-            <h3>Mascotas Web</h3>
-            <p>Galería usando Flexbox y Grid.</p>
-        </div>
-
-    </div>
-</section>
-
-<!-- CONTACTO -->
-<section class="section" id="contacto">
-    <h2>Contacto</h2>
-
-    <form class="formulario">
-        <input type="text" placeholder="Nombre">
-        <input type="email" placeholder="Email">
-        <textarea placeholder="Mensaje"></textarea>
-        <button class="btn">Enviar</button>
-    </form>
-</section>
-
-<footer>
-    <p>© 2026 Juan José Maldonado</p>
-</footer>
-
-<script src="src/js/script.js"></script>
+    <script src="src/js/script.js"></script>
 
 </body>
+
 </html>
