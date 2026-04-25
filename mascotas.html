@@ -6,53 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mis Mascotas</title>
     <link rel="stylesheet" href="src/css/mascotas.css">
+    <link rel="stylesheet" href="src/css/menu_mascotas.css">
 </head>
 
 <body>
 
-<header class="navbar">
-    <h1 class="logo">Mascotas</h1>
+    <header class="navbar">
 
-    <nav>
-        <ul class="nav-links">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="index.html#proyectos">Proyectos</a></li>
-            <li><a href="index.html#contacto">Contacto</a></li>
-        </ul>
-    </nav>
-</header>
+        <h1 class="logo">Mascotas</h1>
 
-<section class="hero">
-    <h2>Mis compañeros de vida 🐾</h2>
-    <p>Pequeños amigos que hacen cada día más especial</p>
-</section>
+        <div class="hamburguesa" id="hamburguesa">
+            ☰
+        </div>
 
-<!-- SOLO 3 MASCOTAS -->
-<section class="gallery-flex">
+        <nav class="menu" id="menu">
+            <a href="index.html">Inicio</a>
+            <a href="index.html#proyectos">Proyectos</a>
+            <a href="index.html#contacto">Contacto</a>
+        </nav>
 
-    <div class="card">
-        <img src="public/img/images.jpeg" alt="Max">
-        <h3>Max</h3>
-        <p>Un perro alegre y leal que siempre llena la casa de energía y felicidad.</p>
-    </div>
+    </header>
+    <main>
+        <section class="hero">
+            <h2>Mis compañeros de vida 🐾</h2>
+            <p>Pequeños amigos que hacen cada día más especial</p>
+        </section>
 
-    <div class="card">
-        <img src="public/img/gato.avif" alt="Luna">
-        <h3>Luna</h3>
-        <p>Una gatita tranquila y curiosa que disfruta dormir bajo el sol.</p>
-    </div>
+        <!-- SOLO 3 MASCOTAS -->
+        <section class="gallery-flex">
 
-    <div class="card">
-        <img src="public/img/leon.jpeg" alt="Chispas">
-        <h3>Chispas</h3>
-        <p>Pequeño, juguetón y lleno de vida, siempre listo para la aventura.</p>
-    </div>
+            <div class="card">
+                <img src="public/img/images.jpeg" alt="Max">
+                <h3>Max</h3>
+                <p>Un perro alegre y leal que siempre llena la casa de energía y felicidad.</p>
+            </div>
 
-</section>
+            <div class="card">
+                <img src="public/img/gato.avif" alt="Luna">
+                <h3>Luna</h3>
+                <p>Una gatita tranquila y curiosa que disfruta dormir bajo el sol.</p>
+            </div>
 
-<footer>
-    <p>© 2026 Juan José Maldonado</p>
-</footer>
+            <div class="card">
+                <img src="public/img/leon.jpeg" alt="Chispas">
+                <h3>Chispas</h3>
+                <p>Pequeño, juguetón y lleno de vida, siempre listo para la aventura.</p>
+            </div>
 
+        </section>
+    </main>
+    <footer>
+        <p>© 2026 Juan José Maldonado</p>
+    </footer>
+    
+    <script src="src/js/hambuerguesa.js"></script>
 </body>
+
 </html>

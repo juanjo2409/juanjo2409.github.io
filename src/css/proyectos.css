@@ -1,0 +1,188 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#07152d;
+font-family:Arial;
+}
+
+/* SECCION */
+#proyectos{
+padding:80px 10%;
+text-align:center;
+}
+
+.subtitulo{
+color:#4ea1ff;
+font-weight:bold;
+letter-spacing:2px;
+margin-bottom:20px;
+}
+
+#proyectos h2{
+font-size:70px;
+color:white;
+margin-bottom:20px;
+}
+
+.descripcion{
+color:#c5d4ec;
+font-size:22px;
+margin-bottom:60px;
+}
+
+/* GRID */
+.portfolio-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:30px;
+}
+
+.full{
+grid-column:1 / span 2;
+}
+
+/* CARD */
+.proyecto-card{
+background:linear-gradient(145deg,#0f2347,#07152d);
+border-radius:30px;
+padding:45px;
+display:flex;
+gap:30px;
+align-items:center;
+box-shadow:0 10px 30px rgba(0,0,0,.4);
+transition:.4s;
+}
+
+.proyecto-card:hover{
+transform:translateY(-10px);
+}
+
+.icono{
+font-size:70px;
+padding:30px;
+border:2px solid #3479ff;
+border-radius:25px;
+}
+
+.verde{
+border-color:#34d058;
+}
+
+.morado{
+border-color:#9b5cff;
+}
+
+.contenido{
+text-align:left;
+}
+
+.tag{
+display:inline-block;
+padding:8px 18px;
+border:1px solid #3479ff;
+border-radius:30px;
+color:#4ea1ff;
+margin-bottom:20px;
+}
+
+.verde-tag{
+border-color:#34d058;
+color:#34d058;
+}
+
+.morado-tag{
+border-color:#9b5cff;
+color:#9b5cff;
+}
+
+.contenido h3{
+font-size:42px;
+color:white;
+margin-bottom:20px;
+}
+
+.contenido p{
+color:#dbe6ff;
+font-size:23px;
+line-height:1.6;
+margin-bottom:30px;
+}
+
+.botones{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:16px 28px;
+border-radius:14px;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
+}
+
+.github{
+background:#3479ff;
+color:white;
+}
+
+.verde-btn{
+background:#34d058;
+color:white;
+}
+
+.morado-btn{
+background:#9b5cff;
+color:white;
+}
+
+.detalle{
+border:2px solid white;
+color:white;
+}
+
+.btn:hover{
+transform:scale(1.05);
+}
+
+.github-total{
+display:inline-block;
+margin-top:70px;
+padding:18px 45px;
+border:2px solid #3479ff;
+color:#4ea1ff;
+text-decoration:none;
+border-radius:50px;
+font-size:22px;
+}
+
+/* responsive */
+@media(max-width:900px){
+
+.portfolio-grid{
+grid-template-columns:1fr;
+}
+
+.full{
+grid-column:auto;
+}
+
+.proyecto-card{
+flex-direction:column;
+text-align:center;
+}
+
+.contenido{
+text-align:center;
+}
+
+#proyectos h2{
+font-size:50px;
+}
+
+}

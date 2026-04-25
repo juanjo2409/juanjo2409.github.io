@@ -1,0 +1,152 @@
+body{
+margin:0;
+font-family:Arial;
+background:#07152d;
+color:white;
+}
+
+/* HERO */
+.hero{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:40px;
+background:linear-gradient(
+180deg,
+#07152d,
+#0c2348
+);
+}
+
+.hero-content{
+max-width:900px;
+}
+
+.hero-img img{
+width:190px;
+height:190px;
+border-radius:50%;
+border:4px solid #38bdf8;
+box-shadow:0 0 30px rgba(56,189,248,.4);
+margin-bottom:30px;
+}
+
+.tagline{
+color:#38bdf8;
+letter-spacing:3px;
+font-weight:bold;
+margin-bottom:15px;
+}
+
+.hero h1{
+font-size:70px;
+margin-bottom:20px;
+}
+
+.hero h1 span{
+color:#38bdf8;
+}
+
+.hero-description{
+font-size:24px;
+line-height:1.7;
+color:#d6e6ff;
+margin-bottom:40px;
+}
+
+.hero-buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.btn-primary,
+.btn-outline{
+padding:16px 35px;
+border-radius:14px;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
+}
+
+.btn-primary{
+background:#38bdf8;
+color:#07152d;
+}
+
+.btn-outline{
+border:2px solid #38bdf8;
+color:#38bdf8;
+}
+
+.btn-primary:hover,
+.btn-outline:hover{
+transform:translateY(-5px);
+}
+
+/* SOBRE MI */
+#sobre{
+padding:100px 10%;
+}
+
+.about-card{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+background:#112445;
+padding:60px;
+border-radius:30px;
+box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+
+.about-left h2{
+font-size:55px;
+margin-bottom:25px;
+}
+
+.about-left p{
+font-size:22px;
+line-height:1.8;
+color:#d6e6ff;
+margin-bottom:20px;
+}
+
+.skills{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+}
+
+.skill-box{
+background:#1c335c;
+padding:30px;
+border-radius:18px;
+font-size:22px;
+font-weight:bold;
+transition:.3s;
+}
+
+.skill-box:hover{
+transform:scale(1.05);
+background:#24477d;
+}
+
+/* responsive */
+@media(max-width:900px){
+
+.hero h1{
+font-size:48px;
+}
+
+.hero-description{
+font-size:20px;
+}
+
+.about-card{
+grid-template-columns:1fr;
+}
+
+}

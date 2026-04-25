@@ -1,115 +1,251 @@
-
 <!DOCTYPE html>
 <html lang="es">
-/* 
-  Portafolio de Juan José Maldonado
-  Desarrollador en formación con proyectos en Python y habilidades en HTML, CSS y JavaScript.
-*/
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juan José Maldonado | Portafolio</title>
     <link rel="stylesheet" href="src/css/styles.css">
+    <link rel="stylesheet" href="src/css/menu.css">
+    <link rel="stylesheet" href="src/css/proyectos.css">
+    <link rel="stylesheet" href="src/css/sobremi.css">
 </head>
 
 <body>
 
-    <!-- HEADER -->
     <header class="navbar">
+
         <h1 class="logo">JM</h1>
 
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#sobre">Quién Soy</a></li>
-                <li><a href="#proyectos">Portafolio</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-                <li><a href="mascotas.html">Mascotas</a></li>
-            </ul>
+        <div class="hamburguesa" id="hamburguesa">
+            ☰
+        </div>
+
+        <nav class="menu" id="menu">
+            <a href="#inicio">Inicio</a>
+            <a href="#sobre">Sobre mí</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#contacto">Contacto</a>
+            <a href="mascotas.html">Mascotas</a>
         </nav>
+
     </header>
 
-    <!-- HERO -->
-    <section class="hero" id="inicio">
 
-        <section class="hero-container">
+    <main>
+        <!-- HERO -->
+        <section class="hero" id="inicio">
 
-            <article class="hero-image">
-                <img src="public/img/foto.jpeg" alt="Foto de perfil de Juan José" class="perfil">
-            </article>
+            <div class="hero-content">
 
-            <article class="hero-text">
-                <h2>I'm Juan José</h2>
+                <div class="hero-img">
+                    <img src="public/img/foto.jpeg" alt="Juan José">
+                </div>
 
-                <p id="texto">
-                    Desarrollador en formación apasionado por crear soluciones digitales modernas y eficientes.
+                <p class="tagline">DESARROLLADOR EN FORMACIÓN</p>
+
+                <h1>
+                    Hola, soy <span>Juan José</span>
+                </h1>
+
+                <p class="hero-description">
+                    Construyo soluciones web modernas, me apasiona Python,
+                    el desarrollo software y seguir creciendo como developer.
                 </p>
 
-                <button class="btn" id="btn">Cambiar texto</button>
-            </article>
+                <div class="hero-buttons">
+                    <a href="#proyectos" class="btn-primary">
+                        Ver proyectos
+                    </a>
+
+                    <a href="#sobre" class="btn-outline">
+                        Sobre mí
+                    </a>
+                </div>
+
+            </div>
 
         </section>
 
-    </section>
 
-    <!-- SOBRE MI -->
-    <section class="section" id="sobre">
-        <h2>Quién Soy</h2>
 
-        <article class="card">
-            <p>
-                Soy estudiante de Análisis y Desarrollo de Software en el SENA, apasionado por el desarrollo web,
-                el aprendizaje continuo y la creación de soluciones digitales.
+        <section id="sobre">
+
+            <div class="about-card">
+
+                <div class="about-left">
+                    <h2>Quién Soy</h2>
+
+                    <p>
+                        Soy estudiante ADSO del SENA enfocado en desarrollo web,
+                        Python y construcción de soluciones digitales.
+                    </p>
+
+                    <p>
+                        Me interesa crear proyectos reales y crecer como
+                        desarrollador full stack.
+                    </p>
+
+                </div>
+
+
+                <div class="skills">
+
+                    <div class="skill-box">
+                        💻 HTML CSS
+                    </div>
+
+                    <div class="skill-box">
+                        🐍 Python
+                    </div>
+
+                    <div class="skill-box">
+                        ⚙ JavaScript
+                    </div>
+
+                    <div class="skill-box">
+                        🚀 Git & GitHub
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROYECTOS -->
+        <section id="proyectos">
+
+            <p class="subtitulo">MI TRABAJO</p>
+            <h2>Portafolio</h2>
+
+            <p class="descripcion">
+                Aquí puedes ver algunos de los proyectos que he desarrollado.
             </p>
-        </article>
-    </section>
 
-    <!-- PROYECTOS -->
-    <section class="section" id="proyectos">
-        <h2>Portafolio</h2>
 
-        <section class="grid">
+            <div class="portfolio-grid">
 
-            <article class="card">
-                <h3>Sistema Inventario</h3>
-                <p>Proyecto en Python para gestión de productos.</p>
-            </article>
+                <!-- Proyecto 1 -->
+                <div class="proyecto-card">
 
-            <article class="card">
-                <h3>Gestión Tareas</h3>
-                <p>App para organizar actividades.</p>
-            </article>
+                    <div class="icono">📦</div>
 
-            <article class="card">
-                <h3>Mascotas Web</h3>
-                <p>Galería usando Flexbox y Grid.</p>
-            </article>
+                    <div class="contenido">
+                        <span class="tag">PYTHON</span>
+
+                        <h3>Sistema Inventario</h3>
+
+                        <p>
+                            Sistema de inventario desarrollado en Python
+                            para gestión de productos.
+                        </p>
+
+                        <div class="botones">
+                            <a href="https://github.com/juanjo2409/proyecto_python.git" target="_blank"
+                                class="btn github">
+                                Ver en GitHub
+                            </a>
+
+                            <a href="#" class="btn detalle">
+                                Ver detalles
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- Proyecto 2 -->
+                <div class="proyecto-card">
+
+                    <div class="icono verde">✔</div>
+
+                    <div class="contenido">
+                        <span class="tag verde-tag">PYTHON</span>
+
+                        <h3>Gestión Tareas</h3>
+
+                        <p>
+                            Aplicación en Python para organización
+                            y control de tareas.
+                        </p>
+
+                        <div class="botones">
+                            <a href="https://github.com/juanjo2409/FundamentosPython.git" target="_blank"
+                                class="btn github verde-btn">
+                                Ver en GitHub
+                            </a>
+
+                            <a href="#" class="btn detalle">
+                                Ver detalles
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- Proyecto 3 -->
+                <div class="proyecto-card full">
+
+                    <div class="icono morado">🐾</div>
+
+                    <div class="contenido">
+                        <span class="tag morado-tag">WEB</span>
+
+                        <h3>Mascotas Web</h3>
+
+                        <p>
+                            Galería creada con HTML y CSS usando
+                            Flexbox y Grid.
+                        </p>
+
+                        <div class="botones">
+                            <a href="mascotas.html" class="btn morado-btn">
+                                Ver página
+                            </a>
+
+                            <a href="#" class="btn detalle">
+                                Ver detalles
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <a href="https://github.com/juanjo2409" target="_blank" class="github-total">
+                Ver más proyectos en GitHub
+            </a>
 
         </section>
-    </section>
 
-    <!-- CONTACTO -->
-    <section class="section" id="contacto">
-        <h2>Contacto</h2>
 
-        <form class="formulario">
-            <input type="text" placeholder="Nombre">
-            <input type="email" placeholder="Email">
-            <textarea placeholder="Mensaje"></textarea>
-            <button class="btn">Enviar</button>
-        </form>
-    </section>
+        <!-- CONTACTO -->
+        <section class="section" id="contacto">
+            <h2>Contacto</h2>
 
+            <form class="formulario">
+                <input type="text" placeholder="Nombre">
+                <input type="email" placeholder="Email">
+                <textarea placeholder="Mensaje"></textarea>
+                <button class="btn">Enviar</button>
+            </form>
+        </section>
+    </main>
     <!-- FOOTER -->
     <footer>
         <p>© 2026 Juan José Maldonado</p>
     </footer>
-
     <script src="src/js/script.js"></script>
-
+    <script src="src/js/hambuerguesa.js"></script>
 </body>
 
-</html>
-```
+
 
 </html>
