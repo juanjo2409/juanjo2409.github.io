@@ -1,28 +1,29 @@
-# 🚀 Portafolio Web - Juan José Maldonado
+# Juan José Maldonado | Web Portfolio
 
-Bienvenido a mi portafolio personal.
+Welcome to my personal portfolio website.
+This project highlights my journey as a developer in training, showcasing my skills, projects, and passion for web development.
 
-Este proyecto muestra mi perfil como desarrollador en formación, mis habilidades y algunos proyectos construidos en Python, HTML, CSS y JavaScript.
-
-## 🌐 Demo en vivo
+## 🌐 Live Demo
 🔗 https://juanjo2409.github.io
 
 ---
 
-## 📌 Sobre el proyecto
+## 📖 About
 
-Este portafolio fue desarrollado como una página web personal para mostrar:
+This portfolio was designed and developed to present my professional profile in a clean, modern, and interactive way.
 
-- Presentación profesional
-- Tecnologías que manejo
-- Proyectos destacados
-- Página adicional de mascotas
-- Formulario de contacto
-- Menú hamburguesa responsive
+It includes:
+
+👨‍💻 Personal introduction
+🧠 Technical skills
+📂 Featured projects
+🐾 Additional pets page
+📩 Contact form
+📱 Fully responsive design
 
 ---
 
-## 🛠 Tecnologías utilizadas
+## Tech Stack
 
 - HTML5  
 - CSS3  
@@ -31,55 +32,59 @@ Este portafolio fue desarrollado como una página web personal para mostrar:
 
 ---
 
-## 📂 Proyectos incluidos
+## Projects
+📦 Inventory System
 
-### 📦 Sistema Inventario
-Aplicación en Python para gestión de productos.
+### Python-based application for product management and inventory control.
 
-Repositorio:
+🔗 Repository:
 https://github.com/juanjo2409/proyecto_python
 
----
+✔ Task Management App
 
-### ✔ Gestión Tareas
-Aplicación en Python para organización y control de tareas.
+### Python application designed to organize and manage daily tasks efficiently.
 
-Repositorio:
+🔗 Repository:
 https://github.com/juanjo2409/FundamentosPython
 
----
+### 🐾 Pets Web
 
-### 🐾 Mascotas Web
-Galería web usando Flexbox y Grid.
+A responsive web gallery built using Flexbox and CSS Grid.
 
-Incluida dentro del portafolio.
-
----
-
-## 🎨 Características
-
-✔ Diseño moderno  
-✔ Responsive Design  
-✔ Menú hamburguesa  
-✔ Portafolio de proyectos  
-✔ Navegación interactiva  
-✔ Integración con GitHub
+📌 Included within this portfolio.
 
 ---
 
-## 📷 Vista previa
+## ✨ Features
 
-Inicio:
-- Hero Section
-- Sobre mí
-- Portafolio
-- Contacto
+- Modern and clean UI
+- Fully responsive design
+- Interactive navigation
+- Hamburger menu
+- GitHub integration
+- Smooth user experience
 
 ---
 
-## 🚀 Cómo ejecutar
+## Preview
 
-Clona el proyecto:
+Sections included:
 
-```bash
+- Hero
+- About Me
+- Portfolio
+- Contact
+---
+
+## Getting Started
+
+Clone the repository:
+
 git clone https://github.com/juanjo2409/juanjo2409.github.io.git
+
+Open the project:
+
+cd juanjo2409.github.io
+
+Then open index.html in your browser.
+
