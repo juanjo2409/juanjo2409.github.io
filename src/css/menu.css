@@ -1,14 +1,9 @@
-.navbar{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:2px 5px;
-background:#020b1d;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-z-index:9999;
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Empuja logo a la izq y menú a la der */
+  align-items: center;          /* Los centra verticalmente */
+  padding: 10px 20px;           /* Espaciado a los lados */
+  background-color: #000b1d;    /* El color oscuro de tu imagen */
 }
 
 .logo{
