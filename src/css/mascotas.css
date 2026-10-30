@@ -1,150 +1,104 @@
+/* =========================================================
+   GALERÍA DE MASCOTAS - JUAN JOSÉ MALDONADO
+   CSS Nativo: Cards Modernas & Responsive
+========================================================= */
 
-/* =========================
-   VARIABLES
-========================= */
-:root {
-    --bg: #0f172a;
-    --card: #020617;
-    --primary: #38bdf8;
-    --text: #e2e8f0;
-    --muted: #94a3b8;
-}
-
-/* =========================
-   RESET
-========================= */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* =========================
-   BODY
-========================= */
-body {
-    font-family: Arial, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-}
-
-/* =========================
-   NAVBAR
-========================= */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-    background: var(--card);
-}
-
-.logo {
-    color: var(--primary);
-}
-
-.nav-links {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: var(--text);
-}
-
-.nav-links a:hover {
-    color: var(--primary);
-}
-
-/* =========================
-   HERO
-========================= */
-.hero {
+.mascotas-hero {
     text-align: center;
-    padding: 60px 20px;
+    padding: 80px 24px 40px;
 }
 
-.hero h2 {
-    font-size: 2.2rem;
-    margin-bottom: 10px;
+.mascotas-hero h2 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 12px;
 }
 
-.hero p {
-    color: var(--muted);
+.mascotas-hero h2 span {
+    color: var(--primary);
 }
 
-/* =========================
-   GALERÍA (SOLO 3 MASCOTAS)
-========================= */
+.mascotas-hero p {
+    color: var(--text-secondary);
+    font-size: 1.15rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Galería Flex */
 .gallery-flex {
     display: flex;
     justify-content: center;
-    gap: 25px;
+    gap: 30px;
     flex-wrap: wrap;
-    padding: 40px;
+    padding: 20px 24px 90px;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
-/* =========================
-   RECUADRO (CARD BONITA)
-========================= */
-.card {
-    background: var(--card);
-    border: 1px solid #1e293b;
-    border-radius: 15px;
-    padding: 20px;
-    width: 280px;
+/* Cards de mascotas */
+.mascota-card {
+    background: var(--bg-glass-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-xl);
+    padding: 24px;
+    width: 310px;
     text-align: center;
-    transition: 0.3s;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    backdrop-filter: blur(14px);
+    box-shadow: var(--shadow-md);
+    position: relative;
+    overflow: hidden;
 }
 
-.card:hover {
-    transform: translateY(-8px);
-    border-color: var(--primary);
-}
-
-/* IMAGEN */
-.card img {
+.mascota-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 200px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--primary), transparent);
+    transition: background 0.3s ease;
+}
+
+.mascota-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--border-hover);
+    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.5), 0 0 25px rgba(56, 189, 248, 0.15);
+}
+
+.mascota-card img {
+    width: 100%;
+    height: 220px;
     object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 15px;
+    border-radius: var(--radius-md);
+    margin-bottom: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: transform 0.3s ease;
 }
 
-/* TITULO */
-.card h3 {
+.mascota-card:hover img {
+    transform: scale(1.02);
+}
+
+.mascota-card h3 {
     color: var(--primary);
-    margin-bottom: 8px;
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 10px;
 }
 
-/* DESCRIPCIÓN */
-.card p {
-    color: var(--muted);
-    font-size: 0.95rem;
+.mascota-card p {
+    color: var(--text-secondary);
+    font-size: 0.96rem;
+    line-height: 1.6;
 }
 
-/* =========================
-   FOOTER
-========================= */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: var(--card);
-    margin-top: 40px;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
 @media (max-width: 768px) {
-    .gallery-flex {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card {
-        width: 90%;
+    .mascota-card {
+        width: 100%;
+        max-width: 360px;
     }
 }

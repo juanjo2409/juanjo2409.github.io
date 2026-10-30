@@ -4,248 +4,1084 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juan José Maldonado | Portafolio</title>
+    <title>Juan José Maldonado | Full Stack Developer (.NET · Azure · Angular)</title>
+    <meta name="description" content="Portafolio profesional de Juan José Maldonado. Desarrollador Full Stack especializado en el ecosistema .NET (ASP.NET Core, Clean Architecture), Microsoft Azure y Frontend con Angular, React y TypeScript.">
+    <meta name="keywords" content=".NET, C#, ASP.NET Core, Clean Architecture, Azure, Angular, React, TypeScript, PostgreSQL, Entity Framework, Tailwind CSS">
+    <meta name="author" content="Juan José Maldonado">
+
+    <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Hojas de Estilo Nativas -->
     <link rel="stylesheet" href="src/css/styles.css">
     <link rel="stylesheet" href="src/css/menu.css">
+    <link rel="stylesheet" href="src/css/stack.css">
     <link rel="stylesheet" href="src/css/proyectos.css">
-    <link rel="stylesheet" href="src/css/sobremi.css">
 </head>
 
 <body>
 
-    <header class="navbar">
+    <!-- =========================================================
+         HEADER & NAVBAR MODERNO (GLASSMORPHISM)
+    ========================================================= -->
+    <header class="navbar-container">
+        <div class="navbar">
+            <!-- Brand / Logo -->
+            <a href="#inicio" class="brand" aria-label="Ir al inicio">
+                <div class="brand-badge">&lt;JM /&gt;</div>
+                <div class="brand-info">
+                    <span class="brand-name">Juan Maldonado</span>
+                    <span class="brand-status">
+                        <span class="brand-status-dot"></span>
+                        Disponible para trabajar
+                    </span>
+                </div>
+            </a>
 
-        <h1 class="logo">JM</h1>
+            <!-- Botón Hamburguesa Móvil -->
+            <button class="hamburger" id="hamburger" aria-label="Abrir menú de navegación">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-        <div class="hamburguesa" id="hamburguesa">
-            ☰
+            <!-- Menú de Navegación Principal -->
+            <nav class="nav-menu" id="navMenu">
+                <a href="#inicio" class="nav-link">Inicio</a>
+                <a href="#sobre" class="nav-link">Sobre mí</a>
+                <a href="#stack" class="nav-link">
+                    Core Stack
+                    <span class="nav-link-badge">Principal</span>
+                </a>
+                <a href="#proyectos" class="nav-link">Proyectos</a>
+                <a href="mascotas.html" class="nav-link">Mascotas 🐾</a>
+                <a href="#contacto" class="nav-cta">
+                    <span>Hablemos</span>
+                    <span>→</span>
+                </a>
+            </nav>
         </div>
-
-        <nav class="menu" id="menu">
-            <a href="#inicio">Inicio</a>
-            <a href="#sobre">Sobre mí</a>
-            <a href="#proyectos">Proyectos</a>
-            <a href="#contacto">Contacto</a>
-            <a href="mascotas.html">Mascotas</a>
-        </nav>
-
     </header>
 
+    <!-- Overlay oscuro para menú móvil -->
+    <div class="nav-backdrop" id="navBackdrop"></div>
 
     <main>
-        <!-- HERO -->
+        <!-- =========================================================
+             HERO SECTION (ORIENTADO A RECLUTADORES)
+        ========================================================= -->
         <section class="hero" id="inicio">
-
             <div class="hero-content">
 
-                <div class="hero-img">
-                    <img src="public/img/foto.jpeg" alt="Juan José">
+                <!-- Avatar con halo animado -->
+                <div class="hero-img-wrapper">
+                    <div class="hero-img-glow"></div>
+                    <img src="public/img/foto.jpeg" alt="Juan José Maldonado" class="hero-avatar">
                 </div>
 
-                <p class="tagline">DESARROLLADOR EN FORMACIÓN</p>
+                <!-- Status pill -->
+                <div class="status-pill">
+                    <span class="pulse-dot"></span>
+                    <span>Abierto a oportunidades laborales · Full Stack Developer</span>
+                </div>
 
-                <h1>
-                    Hola, soy <span>Juan José</span>
+                <p class="hero-tagline">&lt;SOFTWARE ENGINEER /&gt;</p>
+
+                <h1 class="hero-title">
+                    Hola, soy <span>Juan José Maldonado</span>
                 </h1>
 
                 <p class="hero-description">
-                    Construyo soluciones web modernas, me apasiona Python,
-                    el desarrollo software y seguir creciendo como developer.
+                    Desarrollador enfocado en la lógica de servidores y arquitectura escalable con 
+                    <strong>.NET (C#) & Clean Architecture</strong>, despliegues confiables en la nube con 
+                    <strong>Microsoft Azure</strong> e interfaces interactivas y fuertemente tipadas en 
+                    <strong>Angular</strong>, <strong>React</strong> y <strong>Tailwind CSS</strong>.
                 </p>
 
+                <!-- Botones de Acción -->
                 <div class="hero-buttons">
-                    <a href="#proyectos" class="btn-primary">
-                        Ver proyectos
+                    <a href="#stack" class="btn-primary">
+                        <span>⚡ Ver Core Stack</span>
                     </a>
-
-                    <a href="#sobre" class="btn-outline">
-                        Sobre mí
+                    <a href="#proyectos" class="btn-outline">
+                        <span>📂 Explorar Proyectos</span>
+                    </a>
+                    <a href="#contacto" class="btn-outline">
+                        <span>📩 Contactar</span>
                     </a>
                 </div>
 
-            </div>
+                <!-- Tira de Tecnologías Clave -->
+                <div class="hero-tech-strip">
+                    <span class="hero-tech-tag">.NET 8 / 9</span>
+                    <span class="hero-tech-tag">Clean Architecture</span>
+                    <span class="hero-tech-tag">Microsoft Azure</span>
+                    <span class="hero-tech-tag">Angular (TypeScript)</span>
+                    <span class="hero-tech-tag">React + TS</span>
+                    <span class="hero-tech-tag">PostgreSQL & EF Core</span>
+                    <span class="hero-tech-tag">SOLID & DI</span>
+                </div>
 
+            </div>
         </section>
 
+        <!-- =========================================================
+             SOBRE MÍ
+        ========================================================= -->
+        <section class="section" id="sobre">
+            <div class="container">
+                <div class="about-card">
+                    <div class="about-left">
+                        <div class="badge-tag">Perfil Profesional</div>
+                        <h2>Quién <span>Soy</span></h2>
 
+                        <p>
+                            Soy estudiante del programa <strong>ADSO (Análisis y Desarrollo de Software) en el SENA</strong>, 
+                            con un enfoque riguroso en ingeniería de software, arquitectura de sistemas y buenas prácticas de código.
+                        </p>
 
-        <section id="sobre">
+                        <p>
+                            Mi objetivo es aportar solidez técnica a equipos de tecnología mediante la construcción de 
+                            <strong>APIs RESTful de alto rendimiento</strong> estructuradas con <strong>Clean Architecture</strong>, 
+                            soluciones desplegadas en <strong>Microsoft Azure</strong> y aplicaciones frontend reactivas con 
+                            <strong>Angular</strong> y <strong>React (TypeScript)</strong>.
+                        </p>
 
-            <div class="about-card">
+                        <div class="about-highlights">
+                            <div class="about-stat">
+                                <div class="about-stat-number">Clean</div>
+                                <div class="about-stat-label">Architecture & Principios SOLID</div>
+                            </div>
+                            <div class="about-stat">
+                                <div class="about-stat-number">Azure</div>
+                                <div class="about-stat-label">Cloud Deployment & Servicios</div>
+                            </div>
+                            <div class="about-stat">
+                                <div class="about-stat-number">Backend</div>
+                                <div class="about-stat-label">.NET 8/9, EF Core & PostgreSQL</div>
+                            </div>
+                            <div class="about-stat">
+                                <div class="about-stat-number">Frontend</div>
+                                <div class="about-stat-label">Angular, React & Tailwind CSS</div>
+                            </div>
+                        </div>
+                    </div>
 
-                <div class="about-left">
-                    <h2>Quién Soy</h2>
+                    <!-- Grid de Competencias Técnicas -->
+                    <div class="skills">
+                        <div class="skill-box">
+                            <div class="skill-box-icon">⚙️</div>
+                            <div>
+                                <strong>.NET Ecosystem</strong>
+                                <p style="font-size: 0.85rem; color: var(--text-muted); font-weight: normal; margin-top: 4px;">C#, ASP.NET Core, EF Core</p>
+                            </div>
+                        </div>
 
-                    <p>
-                        Soy estudiante ADSO del SENA enfocado en desarrollo web,
-                        Python y construcción de soluciones digitales.
+                        <div class="skill-box">
+                            <div class="skill-box-icon">☁️</div>
+                            <div>
+                                <strong>Microsoft Azure</strong>
+                                <p style="font-size: 0.85rem; color: var(--text-muted); font-weight: normal; margin-top: 4px;">App Services, Cloud DB, CI/CD</p>
+                            </div>
+                        </div>
+
+                        <div class="skill-box">
+                            <div class="skill-box-icon">🅰️</div>
+                            <div>
+                                <strong>Angular & React</strong>
+                                <p style="font-size: 0.85rem; color: var(--text-muted); font-weight: normal; margin-top: 4px;">TypeScript, RxJS, Signals, Hooks</p>
+                            </div>
+                        </div>
+
+                        <div class="skill-box">
+                            <div class="skill-box-icon">🎨</div>
+                            <div>
+                                <strong>Tailwind CSS</strong>
+                                <p style="font-size: 0.85rem; color: var(--text-muted); font-weight: normal; margin-top: 4px;">Diseño limpio, responsivo y UX</p>
+                            </div>
+                        </div>
+
+                        <div class="skill-box">
+                            <div class="skill-box-icon">🐘</div>
+                            <div>
+                                <strong>PostgreSQL</strong>
+                                <p style="font-size: 0.85rem; color: var(--text-muted); font-weight: normal; margin-top: 4px;">Relacional, LINQ, Migraciones</p>
+                            </div>
+                        </div>
+
+                        <div class="skill-box">
+                            <div class="skill-box-icon">🚀</div>
+                            <div>
+                                <strong>Git & GitHub</strong>
+                                <p style="font-size: 0.85rem; color: var(--text-muted); font-weight: normal; margin-top: 4px;">Control de versiones y workflows</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================
+             CORE STACK PRINCIPAL (BACKEND, AZURE, ANGULAR & ARQUITECTURA)
+        ========================================================= -->
+        <section class="section" id="stack">
+            <div class="container">
+
+                <!-- Header de Sección -->
+                <div class="section-header">
+                    <div class="badge-tag">⚡ Núcleo Técnico & Especialidad</div>
+                    <h2 class="section-title">El Core Stack <span>Principal</span></h2>
+                    <p class="section-desc">
+                        Este es mi núcleo fuerte. Demuestra solidez técnica tanto en la lógica de servidores 
+                        y arquitectura de software como en interfaces de usuario interactivas, responsivas y fuertemente tipadas.
                     </p>
+                </div>
 
-                    <p>
-                        Me interesa crear proyectos reales y crecer como
-                        desarrollador full stack.
+                <!-- Banner Informativo para Reclutadores -->
+                <div class="recruiter-pill-banner">
+                    <div class="recruiter-pill-left">
+                        <div class="recruiter-icon-badge">🎯</div>
+                        <div class="recruiter-pill-text">
+                            <h4>Propuesta de Valor para Reclutadores & Tech Leads</h4>
+                            <p>Especialización en Clean Architecture, robustez en el ecosistema .NET, computación en Azure y frontend enterprise en Angular.</p>
+                        </div>
+                    </div>
+                    <div class="recruiter-pill-tags">
+                        <span class="recruiter-badge badge-dotnet">🟣 .NET 8/9 & C#</span>
+                        <span class="recruiter-badge badge-azure">☁️ Microsoft Azure</span>
+                        <span class="recruiter-badge badge-angular">🔴 Angular & TypeScript</span>
+                    </div>
+                </div>
+
+                <!-- Tabs de Navegación del Stack -->
+                <div class="stack-tabs-wrapper">
+                    <div class="stack-tabs" role="tablist">
+                        <button class="stack-tab-btn active" data-tab="tab-backend" role="tab" aria-selected="true">
+                            <span class="tab-icon">🖥️</span>
+                            <span>Backend (.NET)</span>
+                        </button>
+                        <button class="stack-tab-btn" data-tab="tab-azure" role="tab" aria-selected="false">
+                            <span class="tab-icon">☁️</span>
+                            <span>Cloud (Azure)</span>
+                        </button>
+                        <button class="stack-tab-btn" data-tab="tab-frontend" role="tab" aria-selected="false">
+                            <span class="tab-icon">🅰️</span>
+                            <span>Frontend (Angular & React)</span>
+                        </button>
+                        <button class="stack-tab-btn" data-tab="tab-architecture" role="tab" aria-selected="false">
+                            <span class="tab-icon">🏛️</span>
+                            <span>Clean Architecture Explorer</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Paneles de Contenido -->
+                <div class="stack-panels">
+
+                    <!-- =====================================
+                         PANEL 1: BACKEND (.NET ECOSYSTEM)
+                    ===================================== -->
+                    <div class="stack-panel active" id="tab-backend" role="tabpanel">
+                        <div class="stack-grid-2">
+
+                            <!-- Card 1: Framework ASP.NET Core -->
+                            <div class="stack-card">
+                                <div>
+                                    <div class="stack-card-header">
+                                        <div class="stack-card-icon">⚡</div>
+                                        <div class="stack-card-title-group">
+                                            <h3>ASP.NET Core Web API</h3>
+                                            <span class="stack-card-subtitle">.NET 8 / .NET 9 · C# Moderno</span>
+                                        </div>
+                                    </div>
+                                    <p class="stack-card-desc">
+                                        Desarrollo de servicios backend RESTful y Minimal APIs de alto rendimiento con procesamiento 
+                                        asíncrono de extremo a extremo (async/await), middlewares personalizados y serialización ultrarrápida.
+                                    </p>
+                                    <ul class="stack-feature-list">
+                                        <li class="stack-feature-item">
+                                            <span class="stack-check-icon">✓</span>
+                                            <span><strong>Minimal APIs & Controllers:</strong> Endpoints optimizados para alta concurrencia.</span>
+                                        </li>
+                                        <li class="stack-feature-item">
+                                            <span class="stack-check-icon">✓</span>
+                                            <span><strong>Middlewares Globales:</strong> Manejo centralizado de excepciones y logging estructurado.</span>
+                                        </li>
+                                        <li class="stack-feature-item">
+                                            <span class="stack-check-icon">✓</span>
+                                            <span><strong>Swagger / OpenAPI:</strong> Documentación interactiva y contratos de API claros.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="stack-card-tags">
+                                    <span class="stack-pill">.NET 8/9</span>
+                                    <span class="stack-pill">C# 12/13</span>
+                                    <span class="stack-pill">RESTful API</span>
+                                    <span class="stack-pill">Asynchronous</span>
+                                </div>
+                            </div>
+
+                            <!-- Card 2: Clean Architecture & SOLID -->
+                            <div class="stack-card">
+                                <div>
+                                    <div class="stack-card-header">
+                                        <div class="stack-card-icon">🏛️</div>
+                                        <div class="stack-card-title-group">
+                                            <h3>Clean Architecture & Principios</h3>
+                                            <span class="stack-card-subtitle">Domain-Driven · SOLID · IoC</span>
+                                        </div>
+                                    </div>
+                                    <p class="stack-card-desc">
+                                        Separación estricta de responsabilidades en 4 capas desacopladas: Domain con entidades puras, 
+                                        Application, Infrastructure y Presentation/API, garantizando testeabilidad y bajo acoplamiento.
+                                    </p>
+                                    <ul class="stack-feature-list">
+                                        <li class="stack-feature-item">
+                                            <span class="stack-check-icon">✓</span>
+                                            <span><strong>Carpetas Dedicadas:</strong> Estructura limpia para <code>errors</code>, <code>exceptions</code> y <code>value objects</code>.</span>
+                                        </li>
+                                        <li class="stack-feature-item">
+                                            <span class="stack-check-icon">✓</span>
+                                            <span><strong>Patrones Clave:</strong> Repository Pattern y Dependency Injection (IoC Container nativo).</span>
+                                        </li>
+                                        <li class="stack-feature-item">
+                                            <span class="stack-check-icon">✓</span>
+                                            <span><strong>Result Pattern:</strong> Control tipado de flujos de negocio sin sobrecargar con exceptions.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="stack-card-tags">
+                                    <span class="stack-pill">Domain Layer</span>
+                                    <span class="stack-pill">Repository Pattern</span>
+                                    <span class="stack-pill">Dependency Injection</span>
+                                    <span class="stack-pill">SOLID</span>
+                                </div>
+                            </div>
+
+                            <!-- Card 3: Autenticación & Seguridad -->
+                            <div class="stack-card">
+                                <div>
+                                    <div class="stack-card-header">
+                                        <div class="stack-card-icon">🛡️</div>
+                                        <div class="stack-card-title-group">
+                                            <h3>Autenticación & Seguridad</h3>
+                                            <span class="stack-card-subtitle">ASP.NET Core Identity & JWT</span>
+                                        </div>
+                                    </div>
+                                    <p class="stack-card-desc">
+                                        Implementación de seguridad de estándar empresarial para APIs sin estado. Autenticación robusta 
+                                        basada en tokens con control de acceso por roles y reclamaciones de usuario (Claims).
+                                    </p>
+                                    <ul class="stack-feature-list">
+                                        <li class="stack-feature-item">
+                                            <span class="stack-check-icon">✓</span>
+                                            <span><strong>JSON Web Tokens (JWT):</strong> Firmado criptográfico seguro, Access y Refresh Tokens.</span>
+                                        </li>
+                                        <li class="stack-feature-item">
+                                            <span class="stack-check-icon">✓</span>
+                                            <span><strong>ASP.NET Core Identity:</strong> Gestión de usuarios, roles, políticas y protección de endpoints.</span>
+                                        </li>
+                                        <li class="stack-feature-item">
+                                            <span class="stack-check-icon">✓</span>
+                                            <span><strong>Password Hashing:</strong> Almacenamiento seguro de credenciales y protección contra ataques comunes.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="stack-card-tags">
+                                    <span class="stack-pill">JWT Bearer</span>
+                                    <span class="stack-pill">Identity Core</span>
+                                    <span class="stack-pill">Claims Authorization</span>
+                                    <span class="stack-pill">Security</span>
+                                </div>
+                            </div>
+
+                            <!-- Card 4: Bases de Datos & ORM -->
+                            <div class="stack-card">
+                                <div>
+                                    <div class="stack-card-header">
+                                        <div class="stack-card-icon">🐘</div>
+                                        <div class="stack-card-title-group">
+                                            <h3>Bases de Datos & ORM</h3>
+                                            <span class="stack-card-subtitle">PostgreSQL & Entity Framework Core</span>
+                                        </div>
+                                    </div>
+                                    <p class="stack-card-desc">
+                                        Modelado y persistencia relacional optimizada con PostgreSQL y EF Core. Consultas LINQ eficientes, 
+                                        seguimiento de cambios (Change Tracker) y migraciones continuas sin downtime.
+                                    </p>
+                                    <ul class="stack-feature-list">
+                                        <li class="stack-feature-item">
+                                            <span class="stack-check-icon">✓</span>
+                                            <span><strong>Fluent API:</strong> Configuración explícita de esquemas, relaciones e índices.</span>
+                                        </li>
+                                        <li class="stack-feature-item">
+                                            <span class="stack-check-icon">✓</span>
+                                            <span><strong>Consultas Optimizadas:</strong> Uso de <code>AsNoTracking()</code> para lecturas de alto desempeño.</span>
+                                        </li>
+                                        <li class="stack-feature-item">
+                                            <span class="stack-check-icon">✓</span>
+                                            <span><strong>Code-First Migrations:</strong> Versionamiento controlado del esquema de base de datos.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="stack-card-tags">
+                                    <span class="stack-pill">PostgreSQL</span>
+                                    <span class="stack-pill">EF Core 8/9</span>
+                                    <span class="stack-pill">LINQ Queries</span>
+                                    <span class="stack-pill">Code-First</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- =====================================
+                         PANEL 2: CLOUD & DEVOPS (AZURE)
+                    ===================================== -->
+                    <div class="stack-panel" id="tab-azure" role="tabpanel">
+                        <div class="stack-grid-2">
+
+                            <!-- Azure Card 1: App Services & Hosting -->
+                            <div class="stack-card">
+                                <div>
+                                    <div class="stack-card-header">
+                                        <div class="stack-card-icon">☁️</div>
+                                        <div class="stack-card-title-group">
+                                            <h3>Azure App Services & Compute</h3>
+                                            <span class="stack-card-subtitle">PaaS · Escalabilidad · Alta Disponibilidad</span>
+                                        </div>
+                                    </div>
+                                    <p class="stack-card-desc">
+                                        Despliegue y administración de aplicaciones .NET y Angular en la nube mediante servicios gestionados 
+                                        de Microsoft Azure con escalabilidad automática, balanceo de carga y certificados SSL/TLS automáticos.
+                                    </p>
+                                    <ul class="stack-feature-list">
+                                        <li class="stack-feature-item">
+                                            <span class="stack-check-icon">✓</span>
+                                            <span><strong>Azure App Services:</strong> Hosting optimizado para Web APIs en Linux/Windows.</span>
+                                        </li>
+                                        <li class="stack-feature-item">
+                                            <span class="stack-check-icon">✓</span>
+                                            <span><strong>Deployment Slots:</strong> Despliegues tipo Staging y Production sin tiempo de inactividad.</span>
+                                        </li>
+                                        <li class="stack-feature-item">
+                                            <span class="stack-check-icon">✓</span>
+                                            <span><strong>Azure Container Apps:</strong> Empaquetado ligero con Docker para microservicios.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="stack-card-tags">
+                                    <span class="stack-pill">App Services</span>
+                                    <span class="stack-pill">PaaS</span>
+                                    <span class="stack-pill">Docker Containers</span>
+                                    <span class="stack-pill">Zero Downtime</span>
+                                </div>
+                            </div>
+
+                            <!-- Azure Card 2: Seguridad & Key Vault -->
+                            <div class="stack-card">
+                                <div>
+                                    <div class="stack-card-header">
+                                        <div class="stack-card-icon">🔑</div>
+                                        <div class="stack-card-title-group">
+                                            <h3>Azure Key Vault & Cloud Security</h3>
+                                            <span class="stack-card-subtitle">Gestión de Secretos & Configuración Central</span>
+                                        </div>
+                                    </div>
+                                    <p class="stack-card-desc">
+                                        Cero secretos en código fuente. Integración nativa con Azure Key Vault para proteger claves JWT, 
+                                        cadenas de conexión a PostgreSQL y secretos de APIs con Managed Identities de Azure.
+                                    </p>
+                                    <ul class="stack-feature-list">
+                                        <li class="stack-feature-item">
+                                            <span class="stack-check-icon">✓</span>
+                                            <span><strong>Managed Identities:</strong> Autenticación sin contraseñas entre servicios de Azure.</span>
+                                        </li>
+                                        <li class="stack-feature-item">
+                                            <span class="stack-check-icon">✓</span>
+                                            <span><strong>Configuration Provider:</strong> Carga transparente de secretos en el <code>IConfiguration</code> de .NET.</span>
+                                        </li>
+                                        <li class="stack-feature-item">
+                                            <span class="stack-check-icon">✓</span>
+                                            <span><strong>Cifrado en Reposo y Tránsito:</strong> Cumplimiento de estándares de seguridad en la nube.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="stack-card-tags">
+                                    <span class="stack-pill">Azure Key Vault</span>
+                                    <span class="stack-pill">Managed Identity</span>
+                                    <span class="stack-pill">Secrets Management</span>
+                                    <span class="stack-pill">RBAC</span>
+                                </div>
+                            </div>
+
+                            <!-- Azure Card 3: Datos en Nube & Storage -->
+                            <div class="stack-card">
+                                <div>
+                                    <div class="stack-card-header">
+                                        <div class="stack-card-icon">🗄️</div>
+                                        <div class="stack-card-title-group">
+                                            <h3>Bases de Datos & Blob Storage</h3>
+                                            <span class="stack-card-subtitle">Azure Database for PostgreSQL & Storage</span>
+                                        </div>
+                                    </div>
+                                    <p class="stack-card-desc">
+                                        Aprovisionamiento y conexión segura con bases de datos relacionales en la nube y almacenamiento 
+                                        masivo de archivos con Azure Blob Storage para documentos, comprobantes e imágenes.
+                                    </p>
+                                    <ul class="stack-feature-list">
+                                        <li class="stack-feature-item">
+                                            <span class="stack-check-icon">✓</span>
+                                            <span><strong>Azure Database for PostgreSQL:</strong> Instancias flexibles con backups automáticos.</span>
+                                        </li>
+                                        <li class="stack-feature-item">
+                                            <span class="stack-check-icon">✓</span>
+                                            <span><strong>Azure Blob Storage:</strong> Carga y descarga asíncrona de archivos con SAS Tokens seguros.</span>
+                                        </li>
+                                        <li class="stack-feature-item">
+                                            <span class="stack-check-icon">✓</span>
+                                            <span><strong>Reglas de Firewall & VNet:</strong> Restricción de acceso para aislar entornos.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="stack-card-tags">
+                                    <span class="stack-pill">Azure PostgreSQL</span>
+                                    <span class="stack-pill">Blob Storage</span>
+                                    <span class="stack-pill">SAS Tokens</span>
+                                    <span class="stack-pill">Cloud Backup</span>
+                                </div>
+                            </div>
+
+                            <!-- Azure Card 4: CI/CD & Monitoreo -->
+                            <div class="stack-card">
+                                <div>
+                                    <div class="stack-card-header">
+                                        <div class="stack-card-icon">🚀</div>
+                                        <div class="stack-card-title-group">
+                                            <h3>CI/CD Pipelines & Azure Monitor</h3>
+                                            <span class="stack-card-subtitle">Automatización DevOps & Application Insights</span>
+                                        </div>
+                                    </div>
+                                    <p class="stack-card-desc">
+                                        Automatización del ciclo de vida del software mediante flujos de integración y entrega continua (CI/CD) 
+                                        con GitHub Actions y Azure DevOps, supervisados en tiempo real con Application Insights.
+                                    </p>
+                                    <ul class="stack-feature-list">
+                                        <li class="stack-feature-item">
+                                            <span class="stack-check-icon">✓</span>
+                                            <span><strong>Pipelines Automatizados:</strong> Build, pruebas unitarias y despliegue a Azure en cada commit.</span>
+                                        </li>
+                                        <li class="stack-feature-item">
+                                            <span class="stack-check-icon">✓</span>
+                                            <span><strong>Application Insights:</strong> Telemetría de requests, tiempos de respuesta y detección de fallos.</span>
+                                        </li>
+                                        <li class="stack-feature-item">
+                                            <span class="stack-check-icon">✓</span>
+                                            <span><strong>Alertas Proactivas:</strong> Monitoreo de salud del servicio y métricas de rendimiento.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="stack-card-tags">
+                                    <span class="stack-pill">GitHub Actions</span>
+                                    <span class="stack-pill">Azure DevOps</span>
+                                    <span class="stack-pill">App Insights</span>
+                                    <span class="stack-pill">Telemetry</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- =====================================
+                         PANEL 3: FRONTEND (ANGULAR & REACT)
+                    ===================================== -->
+                    <div class="stack-panel" id="tab-frontend" role="tabpanel">
+                        <div class="stack-grid-3">
+
+                            <!-- Frontend Card 1: Angular -->
+                            <div class="stack-card">
+                                <div>
+                                    <div class="stack-card-header">
+                                        <div class="stack-card-icon" style="color: #ef4444;">🅰️</div>
+                                        <div class="stack-card-title-group">
+                                            <h3>Angular (Enterprise)</h3>
+                                            <span class="stack-card-subtitle">TypeScript · RxJS · Signals</span>
+                                        </div>
+                                    </div>
+                                    <p class="stack-card-desc">
+                                        Construcción de interfaces robustas de nivel empresarial. Arquitectura basada en servicios inyectables, 
+                                        programación reactiva mediante observables de RxJS y reactividad fina con Angular Signals.
+                                    </p>
+                                    <ul class="stack-feature-list">
+                                        <li class="stack-feature-item">
+                                            <span class="stack-check-icon">✓</span>
+                                            <span><strong>Servicios & DI:</strong> Inyección de dependencias modular y desacoplada en el cliente.</span>
+                                        </li>
+                                        <li class="stack-feature-item">
+                                            <span class="stack-check-icon">✓</span>
+                                            <span><strong>RxJS & Streams:</strong> Manejo asíncrono avanzado con operadores como pipe, map y catchError.</span>
+                                        </li>
+                                        <li class="stack-feature-item">
+                                            <span class="stack-check-icon">✓</span>
+                                            <span><strong>Guards & Interceptors:</strong> Inyección automática de tokens JWT en cada petición HTTP.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="stack-card-tags">
+                                    <span class="stack-pill">Angular 17+</span>
+                                    <span class="stack-pill">TypeScript</span>
+                                    <span class="stack-pill">RxJS</span>
+                                    <span class="stack-pill">HttpInterceptors</span>
+                                </div>
+                            </div>
+
+                            <!-- Frontend Card 2: React con TypeScript -->
+                            <div class="stack-card">
+                                <div>
+                                    <div class="stack-card-header">
+                                        <div class="stack-card-icon" style="color: #00d8ff;">⚛️</div>
+                                        <div class="stack-card-title-group">
+                                            <h3>React (con TypeScript)</h3>
+                                            <span class="stack-card-subtitle">Componentes Tipados · Custom Hooks</span>
+                                        </div>
+                                    </div>
+                                    <p class="stack-card-desc">
+                                        Desarrollo de interfaces de usuario interactivas, declarativas y fuertemente tipadas. Modelado 
+                                        riguroso de props y estados para prevenir bugs en tiempo de compilación.
+                                    </p>
+                                    <ul class="stack-feature-list">
+                                        <li class="stack-feature-item">
+                                            <span class="stack-check-icon">✓</span>
+                                            <span><strong>Custom Hooks:</strong> Extracción de lógica de negocio y consumo de APIs reutilizable.</span>
+                                        </li>
+                                        <li class="stack-feature-item">
+                                            <span class="stack-check-icon">✓</span>
+                                            <span><strong>Tipado Estricto:</strong> Contratos claros en interfaces, enums y DTOs de frontend.</span>
+                                        </li>
+                                        <li class="stack-feature-item">
+                                            <span class="stack-check-icon">✓</span>
+                                            <span><strong>Estado Predecible:</strong> Manejo limpio del ciclo de vida y renderizado optimizado.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="stack-card-tags">
+                                    <span class="stack-pill">React 18+</span>
+                                    <span class="stack-pill">Strict TypeScript</span>
+                                    <span class="stack-pill">Custom Hooks</span>
+                                    <span class="stack-pill">UI Architecture</span>
+                                </div>
+                            </div>
+
+                            <!-- Frontend Card 3: Tailwind CSS & UI -->
+                            <div class="stack-card">
+                                <div>
+                                    <div class="stack-card-header">
+                                        <div class="stack-card-icon" style="color: #38bdf8;">🎨</div>
+                                        <div class="stack-card-title-group">
+                                            <h3>Tailwind CSS & UI</h3>
+                                            <span class="stack-card-subtitle">Diseño Responsivo · Mobile-First</span>
+                                        </div>
+                                    </div>
+                                    <p class="stack-card-desc">
+                                        Diseño limpio, responsivo y profesional basado en utilidades modernas. Micro-interacciones 
+                                        fluidas, tipografía pulida y armonía visual optimizada tanto en modo oscuro como en pantallas móviles.
+                                    </p>
+                                    <ul class="stack-feature-list">
+                                        <li class="stack-feature-item">
+                                            <span class="stack-check-icon">✓</span>
+                                            <span><strong>Mobile-First:</strong> Adaptabilidad total a cualquier tamaño de pantalla.</span>
+                                        </li>
+                                        <li class="stack-feature-item">
+                                            <span class="stack-check-icon">✓</span>
+                                            <span><strong>Sistema de Diseño:</strong> Paletas armónicas, tokens de espaciado y contraste profesional.</span>
+                                        </li>
+                                        <li class="stack-feature-item">
+                                            <span class="stack-check-icon">✓</span>
+                                            <span><strong>Micro-animaciones:</strong> Transiciones fluidas en hover, modales y navegación.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="stack-card-tags">
+                                    <span class="stack-pill">Tailwind CSS</span>
+                                    <span class="stack-pill">Responsive</span>
+                                    <span class="stack-pill">Modern UI/UX</span>
+                                    <span class="stack-pill">Dark Mode</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- =====================================
+                         PANEL 4: CLEAN ARCHITECTURE EXPLORER
+                    ===================================== -->
+                    <div class="stack-panel" id="tab-architecture" role="tabpanel">
+                        <div class="architecture-explorer-card">
+
+                            <div class="arch-header">
+                                <h3>Explorador Interactivo de Clean Architecture</h3>
+                                <p>Haz clic en cada capa para inspeccionar su responsabilidad estricta, las carpetas dedicadas y cómo garantiza un software desacoplado y mantenible.</p>
+                            </div>
+
+                            <div class="arch-interactive-container">
+
+                                <!-- Botones de las 4 Capas -->
+                                <div class="arch-layers-nav">
+                                    <button class="arch-layer-btn active" data-layer="domain">
+                                        <div class="arch-layer-meta">
+                                            <h4>1. Capa Domain</h4>
+                                            <span>Núcleo Puro · Sin dependencias</span>
+                                        </div>
+                                        <span class="arch-layer-badge">Cero Dependencias</span>
+                                    </button>
+
+                                    <button class="arch-layer-btn" data-layer="application">
+                                        <div class="arch-layer-meta">
+                                            <h4>2. Capa Application</h4>
+                                            <span>Casos de Uso & Orquestación</span>
+                                        </div>
+                                        <span class="arch-layer-badge">Depende de Domain</span>
+                                    </button>
+
+                                    <button class="arch-layer-btn" data-layer="infrastructure">
+                                        <div class="arch-layer-meta">
+                                            <h4>3. Capa Infrastructure</h4>
+                                            <span>Persistencia, Azure & Datos</span>
+                                        </div>
+                                        <span class="arch-layer-badge">Implementa Application</span>
+                                    </button>
+
+                                    <button class="arch-layer-btn" data-layer="presentation">
+                                        <div class="arch-layer-meta">
+                                            <h4>4. Capa Presentation / API</h4>
+                                            <span>ASP.NET Core Web API (.NET 8/9)</span>
+                                        </div>
+                                        <span class="arch-layer-badge">Punto de Entrada</span>
+                                    </button>
+                                </div>
+
+                                <!-- Visor Dinámico de la Capa Seleccionada -->
+                                <div class="arch-display-box">
+                                    <div>
+                                        <div class="arch-display-title-group">
+                                            <h4 id="archDisplayTitle">Capa Domain (Núcleo de Negocio Puro)</h4>
+                                            <span class="arch-rule-pill" id="archDisplayRule">Regla: Cero dependencias externas</span>
+                                        </div>
+
+                                        <p class="arch-display-desc" id="archDisplayDesc">
+                                            Representa el núcleo inviolable del sistema. Contiene entidades puras, objetos de valor y reglas de negocio. No hace referencia a frameworks web, Entity Framework ni bases de datos.
+                                        </p>
+
+                                        <div class="arch-folders-box">
+                                            <div class="arch-folders-title">
+                                                <span>📁</span>
+                                                <span>Carpetas Dedicadas y Estructura:</span>
+                                            </div>
+                                            <ul class="arch-folder-tree" id="archDisplayFolders">
+                                                <!-- Llenado dinámicamente por Vanilla JS -->
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="arch-principles-strip" id="archDisplayPrinciples">
+                                        <!-- Principios dinámicos por Vanilla JS -->
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- Visor de Blueprint de Código / Estructura en Vivo -->
+                            <div class="code-blueprint-window">
+                                <div class="code-window-topbar">
+                                    <div class="code-window-dots">
+                                        <span class="code-window-dot dot-red"></span>
+                                        <span class="code-window-dot dot-yellow"></span>
+                                        <span class="code-window-dot dot-green"></span>
+                                    </div>
+                                    <span class="code-window-title">Arquitectura & Código Blueprint (Live Preview)</span>
+                                    <div class="code-window-actions">
+                                        <button class="btn-copy-code" id="btnCopyCode" title="Copiar código al portapapeles">
+                                            <span>📋</span>
+                                            <span>Copiar Blueprint</span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="code-tabs-bar">
+                                    <button class="code-tab-btn active" data-code="solution">📁 Solución .NET (Estructura)</button>
+                                    <button class="code-tab-btn" data-code="repository">📄 UserRepository.cs (EF Core)</button>
+                                    <button class="code-tab-btn" data-code="auth">🛡️ AuthController.cs (JWT Auth)</button>
+                                    <button class="code-tab-btn" data-code="angular">🅰️ user.service.ts (Angular 17+)</button>
+                                </div>
+
+                                <div class="code-display-body">
+                                    <pre><code id="codeSnippetDisplay">// Cargando blueprint...</code></pre>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =========================================================
+             PROYECTOS DESTACADOS
+        ========================================================= -->
+        <section class="section" id="proyectos">
+            <div class="container">
+                <div class="section-header">
+                    <div class="badge-tag">Mi Trabajo</div>
+                    <h2 class="section-title">Portafolio de <span>Proyectos</span></h2>
+                    <p class="section-desc">
+                        Soluciones desarrolladas aplicando lógica de programación, control de versiones y diseño estructurado.
                     </p>
+                </div>
+
+                <div class="portfolio-grid">
+
+                    <!-- Proyecto 1 -->
+                    <div class="proyecto-card">
+                        <div class="icono">📦</div>
+                        <div class="contenido">
+                            <div class="tag-group">
+                                <span class="tag">PYTHON</span>
+                                <span class="tag">BACKEND</span>
+                            </div>
+                            <h3>Sistema de Inventario</h3>
+                            <p>
+                                Aplicación para la gestión estructurada de productos, control de stock, registros de entrada/salida y validación de datos de inventario.
+                            </p>
+                            <div class="botones">
+                                <a href="https://github.com/juanjo2409/proyecto_python.git" target="_blank" rel="noopener noreferrer" class="btn github">
+                                    <span>Ver en GitHub</span>
+                                    <span>↗</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proyecto 2 -->
+                    <div class="proyecto-card">
+                        <div class="icono verde">✔</div>
+                        <div class="contenido">
+                            <div class="tag-group">
+                                <span class="tag verde-tag">PYTHON</span>
+                                <span class="tag verde-tag">PRODUCTIVIDAD</span>
+                            </div>
+                            <h3>Gestión de Tareas</h3>
+                            <p>
+                                Software para organización y seguimiento eficiente de actividades diarias, estados de cumplimiento y persistencia de registros.
+                            </p>
+                            <div class="botones">
+                                <a href="https://github.com/juanjo2409/FundamentosPython.git" target="_blank" rel="noopener noreferrer" class="btn verde-btn">
+                                    <span>Ver en GitHub</span>
+                                    <span>↗</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proyecto 3 -->
+                    <div class="proyecto-card full">
+                        <div class="icono morado">🐾</div>
+                        <div class="contenido">
+                            <div class="tag-group">
+                                <span class="tag morado-tag">FRONTEND</span>
+                                <span class="tag morado-tag">CSS GRID & FLEXBOX</span>
+                            </div>
+                            <h3>Galería de Mascotas Web</h3>
+                            <p>
+                                Interfaz web totalmente adaptativa y responsiva construida con CSS nativo, Flexbox y Grid sin dependencias externas, enfocada en velocidad y fluidez.
+                            </p>
+                            <div class="botones">
+                                <a href="mascotas.html" class="btn morado-btn">
+                                    <span>Ver página interactiva</span>
+                                    <span>→</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
 
-
-                <div class="skills">
-
-                    <div class="skill-box">
-                        💻 HTML CSS
-                    </div>
-
-                    <div class="skill-box">
-                        🐍 Python
-                    </div>
-
-                    <div class="skill-box">
-                        ⚙ JavaScript
-                    </div>
-
-                    <div class="skill-box">
-                        🚀 Git & GitHub
-                    </div>
-
+                <div class="github-total-wrapper">
+                    <a href="https://github.com/juanjo2409" target="_blank" rel="noopener noreferrer" class="github-total">
+                        <span>Ver más repositorios y actividad en GitHub</span>
+                        <span>↗</span>
+                    </a>
                 </div>
-
             </div>
-
         </section>
 
-
-        <!-- PROYECTOS -->
-        <section id="proyectos">
-
-            <p class="subtitulo">MI TRABAJO</p>
-            <h2>Portafolio</h2>
-
-            <p class="descripcion">
-                Aquí puedes ver algunos de los proyectos que he desarrollado.
-            </p>
-
-
-            <div class="portfolio-grid">
-
-                <!-- Proyecto 1 -->
-                <div class="proyecto-card">
-
-                    <div class="icono">📦</div>
-
-                    <div class="contenido">
-                        <span class="tag">PYTHON</span>
-
-                        <h3>Sistema Inventario</h3>
-
-                        <p>
-                            Sistema de inventario desarrollado en Python
-                            para gestión de productos.
-                        </p>
-
-                        <div class="botones">
-                            <a href="https://github.com/juanjo2409/proyecto_python.git" target="_blank"
-                                class="btn github">
-                                Ver en GitHub
-                            </a>
-
-                            <a href="#" class="btn detalle">
-                                Ver detalles
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-
-
-                <!-- Proyecto 2 -->
-                <div class="proyecto-card">
-
-                    <div class="icono verde">✔</div>
-
-                    <div class="contenido">
-                        <span class="tag verde-tag">PYTHON</span>
-
-                        <h3>Gestión Tareas</h3>
-
-                        <p>
-                            Aplicación en Python para organización
-                            y control de tareas.
-                        </p>
-
-                        <div class="botones">
-                            <a href="https://github.com/juanjo2409/FundamentosPython.git" target="_blank"
-                                class="btn github verde-btn">
-                                Ver en GitHub
-                            </a>
-
-                            <a href="#" class="btn detalle">
-                                Ver detalles
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-
-
-                <!-- Proyecto 3 -->
-                <div class="proyecto-card full">
-
-                    <div class="icono morado">🐾</div>
-
-                    <div class="contenido">
-                        <span class="tag morado-tag">WEB</span>
-
-                        <h3>Mascotas Web</h3>
-
-                        <p>
-                            Galería creada con HTML y CSS usando
-                            Flexbox y Grid.
-                        </p>
-
-                        <div class="botones">
-                            <a href="mascotas.html" class="btn morado-btn">
-                                Ver página
-                            </a>
-
-                            <a href="#" class="btn detalle">
-                                Ver detalles
-                            </a>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <a href="https://github.com/juanjo2409" target="_blank" class="github-total">
-                Ver más proyectos en GitHub
-            </a>
-
-        </section>
-
-
-        <!-- CONTACTO -->
+        <!-- =========================================================
+             CONTACTO (RECRUITER-FRIENDLY)
+        ========================================================= -->
         <section class="section" id="contacto">
-            <h2>Contacto</h2>
+            <div class="container">
+                <div class="section-header">
+                    <div class="badge-tag">Conectemos</div>
+                    <h2 class="section-title">Hablemos de tu <span>Próximo Proyecto</span></h2>
+                    <p class="section-desc">
+                        ¿Tienes una vacante o buscas un desarrollador Full Stack comprometido con el código limpio y la arquitectura sólida?
+                    </p>
+                </div>
 
-            <form class="formulario">
-                <input type="text" placeholder="Nombre">
-                <input type="email" placeholder="Email">
-                <textarea placeholder="Mensaje"></textarea>
-                <button class="btn">Enviar</button>
-            </form>
+                <div class="contacto-grid">
+                    <!-- Info lateral -->
+                    <div class="contacto-info">
+                        <h3>Información de Contacto</h3>
+                        <p>
+                            Estoy disponible para contrataciones directas, trabajo en equipo remoto o proyectos freelance. Respondo con rapidez.
+                        </p>
+
+                        <div class="contacto-items">
+                            <div class="contacto-item">
+                                <div class="contacto-item-icon">📍</div>
+                                <div class="contacto-item-text">
+                                    <span>Ubicación</span>
+                                    <strong>Colombia · Remoto / Híbrido</strong>
+                                </div>
+                            </div>
+
+                            <div class="contacto-item">
+                                <div class="contacto-item-icon">💼</div>
+                                <div class="contacto-item-text">
+                                    <span>Rol Objetivo</span>
+                                    <strong>Full Stack .NET / Angular / Azure Developer</strong>
+                                </div>
+                            </div>
+
+                            <div class="contacto-item">
+                                <div class="contacto-item-icon">💻</div>
+                                <div class="contacto-item-text">
+                                    <span>GitHub Oficial</span>
+                                    <strong>github.com/juanjo2409</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Formulario de contacto funcional con feedback -->
+                    <div class="formulario-card">
+                        <form class="formulario" id="contactForm">
+                            <div class="form-group">
+                                <label for="contactName">Nombre o Empresa *</label>
+                                <input type="text" id="contactName" class="form-control" placeholder="Ej: María Gómez / Empresa Tech" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contactEmail">Correo Electrónico *</label>
+                                <input type="email" id="contactEmail" class="form-control" placeholder="nombre@correo.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contactMessage">Mensaje o Propuesta *</label>
+                                <textarea id="contactMessage" class="form-control" placeholder="Cuéntame sobre la posición, proyecto o consulta..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn-submit">
+                                <span>Enviar Mensaje</span>
+                                <span>🚀</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2026 Juan José Maldonado</p>
+
+    <!-- =========================================================
+         FOOTER MODERNO Y DESCRIPTIVO
+    ========================================================= -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+
+                <!-- Columna 1: Brand & Status -->
+                <div class="footer-brand">
+                    <a href="#inicio" class="footer-logo">
+                        <span class="footer-logo-badge">&lt;JM /&gt;</span>
+                        <span>Juan Maldonado</span>
+                    </a>
+                    <p>
+                        Full Stack Software Developer especializado en <strong>.NET (C#)</strong> con Clean Architecture, 
+                        despliegues cloud en <strong>Microsoft Azure</strong> e interfaces reactivas en <strong>Angular</strong> y <strong>React</strong>.
+                    </p>
+                    <div class="footer-status">
+                        <span class="pulse-dot"></span>
+                        <span>Disponible para nuevos proyectos y roles</span>
+                    </div>
+                </div>
+
+                <!-- Columna 2: Navegación Rápida -->
+                <div>
+                    <h4 class="footer-title">Navegación</h4>
+                    <ul class="footer-links">
+                        <li><a href="#inicio"><span>›</span> Inicio</a></li>
+                        <li><a href="#sobre"><span>›</span> Sobre mí</a></li>
+                        <li><a href="#stack"><span>›</span> Core Stack</a></li>
+                        <li><a href="#proyectos"><span>›</span> Proyectos</a></li>
+                        <li><a href="mascotas.html"><span>›</span> Galería de Mascotas</a></li>
+                        <li><a href="#contacto"><span>›</span> Contacto</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3: Pilares Tecnológicos -->
+                <div>
+                    <h4 class="footer-title">Pilares del Stack</h4>
+                    <div class="footer-tags">
+                        <span class="footer-tag">ASP.NET Core Web API</span>
+                        <span class="footer-tag">Clean Architecture</span>
+                        <span class="footer-tag">Microsoft Azure</span>
+                        <span class="footer-tag">Angular (TypeScript)</span>
+                        <span class="footer-tag">PostgreSQL</span>
+                        <span class="footer-tag">Entity Framework Core</span>
+                        <span class="footer-tag">JWT & Identity</span>
+                        <span class="footer-tag">SOLID & DI</span>
+                        <span class="footer-tag">Tailwind CSS</span>
+                    </div>
+                </div>
+
+                <!-- Columna 4: Conectar -->
+                <div>
+                    <h4 class="footer-title">Conectar</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px;">
+                        Visita mi repositorio para revisar código y proyectos en constante evolución.
+                    </p>
+                    <div class="footer-social-links">
+                        <a href="https://github.com/juanjo2409" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="GitHub">
+                            <span>💻</span>
+                        </a>
+                        <a href="#contacto" class="footer-social-btn" title="Enviar Mensaje">
+                            <span>✉️</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Barra inferior -->
+            <div class="footer-bottom">
+                <p>© 2026 Juan José Maldonado. Diseñado y desarrollado con CSS nativo y JavaScript vanilla en GitHub Pages.</p>
+                <a href="#inicio" class="btn-back-to-top" id="backToTopBtn">
+                    <span>Volver arriba</span>
+                    <span>↑</span>
+                </a>
+            </div>
+        </div>
     </footer>
-    <script src="src/js/script.js"></script>
+
+    <!-- Contenedor dinámico de notificaciones Toast -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Scripts Nativos (Vanilla JS) -->
     <script src="src/js/hambuerguesa.js"></script>
+    <script src="src/js/script.js"></script>
 </body>
-
-
 
 </html>

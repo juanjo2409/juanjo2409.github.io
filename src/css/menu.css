@@ -1,54 +1,281 @@
+/* =========================================================
+   HEADER & NAVBAR MODERNO - JUAN JOSÉ MALDONADO
+   CSS Nativo - Glassmorphism, Sticky & Mobile First
+========================================================= */
+
+.navbar-container {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(7, 13, 30, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.navbar-container.scrolled {
+    background: rgba(5, 10, 24, 0.95);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+    border-bottom-color: rgba(56, 189, 248, 0.2);
+}
+
 .navbar {
-  display: flex;
-  justify-content: space-between; /* Empuja logo a la izq y menú a la der */
-  align-items: center;          /* Los centra verticalmente */
-  padding: 10px 20px;           /* Espaciado a los lados */
-  background-color: #000b1d;    /* El color oscuro de tu imagen */
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.logo{
-color:#38bdf8;
-font-size:35px;
-font-weight:bold;
+/* BRAND / LOGO */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: var(--text-primary);
 }
 
-.hamburguesa{
-font-size:42px;
-color:white;
-cursor:pointer;
+.brand-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: linear-gradient(135deg, rgba(56, 189, 248, 0.2) 0%, rgba(139, 92, 246, 0.25) 100%);
+    border: 1px solid rgba(56, 189, 248, 0.4);
+    border-radius: 12px;
+    color: var(--primary);
+    font-family: var(--font-mono);
+    font-size: 1.1rem;
+    font-weight: 800;
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* oculto */
-.menu{
-display:none;
-position:absolute;
-top:80px;
-right:30px;
-background:#112445;
-padding:30px 40px;
-border-radius:18px;
-box-shadow:0 5px 20px rgba(0,0,0,.4);
-z-index:9999;
+.brand:hover .brand-badge {
+    transform: scale(1.08) rotate(-2deg);
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.45);
+    border-color: var(--primary);
 }
 
-/* abre con JS */
-.menu.activo{
-display:block; /* antes flex */
+.brand-info {
+    display: flex;
+    flex-direction: column;
 }
 
-.menu a{
-display:block;
-margin:15px 0;
-text-decoration:none;
-color:white;
-font-size:20px;
-font-weight:bold;
+.brand-name {
+    font-size: 1.05rem;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    color: #ffffff;
+    line-height: 1.2;
 }
 
-.menu a:hover{
-color:#38bdf8;
+.brand-status {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    color: #34d399;
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }
 
-.hero{
-padding-top:130px;
+.brand-status-dot {
+    width: 6px;
+    height: 6px;
+    background: #34d399;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #34d399;
+    animation: statusPulse 2s infinite;
+}
+
+@keyframes statusPulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+/* DESKTOP NAVIGATION */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    list-style: none;
+}
+
+.nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: color 0.2s ease, background 0.2s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.nav-link.active {
+    color: var(--primary);
+}
+
+/* Badge especial para el Core Stack en el menú */
+.nav-link-badge {
+    font-size: 0.65rem;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    padding: 2px 6px;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.3), rgba(56, 189, 248, 0.3));
+    border: 1px solid rgba(56, 189, 248, 0.4);
+    border-radius: 9999px;
+    color: var(--primary);
+    text-transform: uppercase;
+}
+
+/* BOTÓN CTA EN NAVBAR */
+.nav-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 12px;
+    padding: 9px 20px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #ffffff;
+    background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(139, 92, 246, 0.3));
+    border: 1px solid rgba(56, 189, 248, 0.4);
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(56, 189, 248, 0.15);
+    transition: all 0.3s ease;
+}
+
+.nav-cta:hover {
+    background: linear-gradient(135deg, #38bdf8, #2563eb);
+    border-color: #38bdf8;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(56, 189, 248, 0.35);
+}
+
+/* BOTÓN HAMBURGUESA (MÓVIL) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 32px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #ffffff;
+    border-radius: 4px;
+    transition: transform 0.3s ease, opacity 0.3s ease, background 0.3s ease;
+}
+
+.hamburger.is-active span:nth-child(1) {
+    transform: translateY(10.5px) rotate(45deg);
+    background: var(--primary);
+}
+
+.hamburger.is-active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.is-active span:nth-child(3) {
+    transform: translateY(-10.5px) rotate(-45deg);
+    background: var(--primary);
+}
+
+/* OVERLAY PARA MÓVIL */
+.nav-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    z-index: 998;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.nav-backdrop.is-active {
+    display: block;
+    opacity: 1;
+}
+
+/* RESPONSIVE: MÓVIL Y TABLET */
+@media (max-width: 900px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 76px;
+        right: 0;
+        width: 82%;
+        max-width: 340px;
+        height: calc(100vh - 76px);
+        background: rgba(10, 18, 42, 0.98);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-left: 1px solid rgba(56, 189, 248, 0.2);
+        padding: 30px 24px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        transform: translateX(100%);
+        transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        z-index: 999;
+        overflow-y: auto;
+    }
+
+    .nav-menu.is-active {
+        transform: translateX(0);
+        box-shadow: -15px 0 35px rgba(0, 0, 0, 0.6);
+    }
+
+    .nav-link {
+        font-size: 1.1rem;
+        padding: 14px 16px;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        background: rgba(255, 255, 255, 0.02);
+    }
+
+    .nav-link:hover,
+    .nav-link:focus {
+        background: rgba(56, 189, 248, 0.1);
+        border-color: rgba(56, 189, 248, 0.3);
+    }
+
+    .nav-cta {
+        margin-left: 0;
+        margin-top: 10px;
+        text-align: center;
+        justify-content: center;
+        padding: 14px;
+        font-size: 1rem;
+    }
 }
