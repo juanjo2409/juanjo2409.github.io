@@ -4,20 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juan José Maldonado Navarro | Backend .NET & Full Stack Developer</title>
-    <meta name="description" content="Portafolio profesional de Juan José Maldonado Navarro. Desarrollador Backend .NET (C#, Clean Architecture, DDD, SOLID) y Full Stack (React, Angular, TypeScript, PostgreSQL, Docker). Certificado EF SET B2 (Reading C2).">
-    <meta name="keywords" content="Juan José Maldonado, .NET 10, C#, ASP.NET Core, Clean Architecture, DDD, SOLID, PostgreSQL, EF Core, Docker, React, TypeScript, Tailwind CSS, Barranquilla, Colombia">
-    <meta name="author" content="Juan José Maldonado Navarro">
+    <title>juanjo2409 | Juan José Maldonado — Backend .NET & Full Stack</title>
+    <meta name="description" content="Portafolio de Juan José Maldonado (juanjo2409). Desarrollador Backend .NET y Full Stack enfocado en Clean Architecture, C#, PostgreSQL, Docker y React.">
+    <meta name="author" content="Juan José Maldonado Navarro (juanjo2409)">
 
-    <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
 
     <!-- Devicon Official Colored Tech Icons -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 
-    <!-- Estilos Nativos Tema Blanco / White Theme -->
+    <!-- Estilos Nativos Tema Blanco -->
     <link rel="stylesheet" href="src/css/styles.css">
     <link rel="stylesheet" href="src/css/menu.css">
     <link rel="stylesheet" href="src/css/proyectos.css">
@@ -26,164 +25,142 @@
 
 <body>
 
-    <!-- Fondo sutil de cuadrícula y orbes de luz -->
-    <div class="bg-grid-pattern" aria-hidden="true"></div>
-    <div class="bg-orb orb-primary" aria-hidden="true"></div>
-    <div class="bg-orb orb-secondary" aria-hidden="true"></div>
+    <!-- Fondo de luz suave -->
+    <div class="glow-bg-top" aria-hidden="true"></div>
+    <div class="glow-bg-bottom" aria-hidden="true"></div>
 
     <!-- =========================================================
-         1. NAVBAR MODERNO (TEMA BLANCO CON GLASSMORPHISM)
+         HEADER: juanjo2409 + LOGO ÚNICO + SOLO (INICIO, PROYECTOS, SERVICIOS)
     ========================================================= -->
-    <header class="navbar-container" id="navbarContainer">
-        <div class="navbar">
-            <!-- Brand / Logo -->
-            <a href="#inicio" class="brand" aria-label="Ir al inicio">
-                <div class="brand-badge">&lt;JM /&gt;</div>
-                <div class="brand-info">
-                    <span class="brand-name">Juan José Maldonado</span>
-                    <span class="brand-status">
-                        <span class="brand-status-dot"></span>
-                        Disponible · Remoto / Barranquilla
-                    </span>
+    <header class="site-header" id="siteHeader">
+        <div class="container header-inner">
+            <!-- Brand: Logo Único + usuario juanjo2409 -->
+            <a href="#inicio" class="brand" aria-label="juanjo2409 - Inicio">
+                <div class="brand-logo-mark">
+                    <svg viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+                        <rect width="38" height="38" rx="10" fill="url(#logoGrad)" />
+                        <path d="M12 11L7 19L12 27" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M26 11L31 19L26 27" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M22 13L16 25" stroke="#93c5fd" stroke-width="2.5" stroke-linecap="round"/>
+                        <circle cx="19" cy="19" r="2.5" fill="#ffffff" />
+                        <defs>
+                            <linearGradient id="logoGrad" x1="0" y1="0" x2="38" y2="38" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#2563eb" />
+                                <stop offset="1" stop-color="#7c3aed" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
                 </div>
+                <span class="brand-text">juanjo2409</span>
             </a>
 
             <!-- Botón Hamburguesa Móvil -->
-            <button class="hamburger" id="hamburger" aria-label="Abrir menú de navegación">
+            <button class="hamburger-btn" id="hamburgerBtn" aria-label="Abrir menú">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
 
-            <!-- Menú de Navegación Principal -->
-            <nav class="nav-menu" id="navMenu">
-                <a href="#inicio" class="nav-link active">Inicio</a>
-                <a href="#proyectos" class="nav-link">
-                    Proyectos
-                    <span class="nav-link-badge">Portafolio</span>
-                </a>
-                <a href="#servicios" class="nav-link">Servicios & Stack</a>
-                <a href="#trayectoria" class="nav-link">Formación & B2</a>
-                <a href="#contacto" class="nav-cta">
-                    <span>Hablemos</span>
-                    <span>→</span>
-                </a>
+            <!-- Menú de Navegación: SOLO Inicio, Proyectos y Servicios -->
+            <nav class="nav-links" id="navLinks">
+                <a href="#inicio" class="nav-item active">Inicio</a>
+                <a href="#proyectos" class="nav-item">Proyectos</a>
+                <a href="#servicios" class="nav-item">Servicios</a>
             </nav>
         </div>
     </header>
 
-    <!-- Overlay móvil -->
-    <div class="nav-backdrop" id="navBackdrop"></div>
+    <div class="nav-overlay" id="navOverlay"></div>
 
     <main>
         <!-- =========================================================
-             2. INICIO / PRESENTACIÓN (FOTO A LA DERECHA + ANIMACIONES)
+             INICIO: FOTO GRANDE DERECHA + PRESENTACIÓN CONCISA + ANIMACIONES
         ========================================================= -->
-        <section class="hero" id="inicio">
-            <div class="container hero-grid">
+        <section class="hero-section" id="inicio">
+            <div class="container hero-container">
 
-                <!-- Columna Izquierda: Presentación y propuesta de valor -->
-                <div class="hero-left">
-                    <div class="status-pill">
-                        <span class="pulse-dot"></span>
-                        <span>Open to Work · Backend .NET & Full Stack Developer</span>
+                <!-- Columna Izquierda: Presentación directa sin relleno -->
+                <div class="hero-intro">
+                    <div class="availability-tag">
+                        <span class="dot-live"></span>
+                        <span>Disponible para trabajar</span>
                     </div>
 
-                    <p class="hero-tagline">&lt;SOFTWARE ENGINEER /&gt;</p>
-
-                    <h1 class="hero-title">
-                        Hola, soy <span>Juan José Maldonado Navarro</span> 👋
+                    <h1 class="hero-name">
+                        Hola, soy <span>Juan José Maldonado</span>
                     </h1>
 
-                    <!-- Typewriter Dinámico -->
-                    <div class="hero-typewriter-box">
-                        <span class="typewriter-prefix">Especialista en</span>
-                        <span class="typewriter-text" id="typewriterText">Backend .NET & Clean Architecture</span>
-                        <span class="typewriter-cursor">|</span>
+                    <div class="hero-role-badge">
+                        <span class="typing-role" id="typingRole">Backend .NET & Full Stack Developer</span>
                     </div>
 
-                    <p class="hero-description">
-                        Desarrollador de software enfocado en construir <strong>APIs RESTful de alto rendimiento</strong>, arquitecturas escalables y código limpio en el ecosistema <strong>.NET / C#</strong>. Apasionado por aplicar <strong>Clean Architecture</strong>, <strong>Domain-Driven Design (DDD)</strong> y principios <strong>SOLID</strong>. Certificado <strong>B2 Upper Intermediate en Inglés (EF SET)</strong> con nivel <strong>C2 en lectura técnica</strong>.
+                    <p class="hero-bio">
+                        Desarrollador de software enfocado en construir APIs de alto rendimiento con <strong>.NET / C#</strong> y <strong>Clean Architecture</strong>, combinando persistencia sólida en <strong>PostgreSQL</strong> y frontends reactivos con <strong>React</strong> y <strong>TypeScript</strong>.
                     </p>
 
+                    <!-- Iconos de Stack Interactivos con Animación Hover -->
+                    <div class="hero-tech-pills">
+                        <span class="pill" title="C#"><i class="devicon-csharp-plain colored"></i> C#</span>
+                        <span class="pill" title=".NET"><i class="devicon-dotnetcore-plain colored"></i> .NET</span>
+                        <span class="pill" title="PostgreSQL"><i class="devicon-postgresql-plain colored"></i> PostgreSQL</span>
+                        <span class="pill" title="Docker"><i class="devicon-docker-plain colored"></i> Docker</span>
+                        <span class="pill" title="React"><i class="devicon-react-original colored"></i> React</span>
+                        <span class="pill" title="TypeScript"><i class="devicon-typescript-plain colored"></i> TypeScript</span>
+                    </div>
+
                     <!-- Botones de Acción -->
-                    <div class="hero-buttons">
-                        <a href="#proyectos" class="btn-primary">
-                            <span>🚀 Ver Mis Proyectos</span>
+                    <div class="hero-actions">
+                        <a href="#proyectos" class="btn-cta-primary">
+                            <span>Ver Proyectos</span>
+                            <span class="btn-arrow">↓</span>
                         </a>
-                        <a href="#contacto" class="btn-outline">
-                            <span>📩 Contactar Conmigo</span>
+                        <a href="#contacto" class="btn-cta-secondary">
+                            <span>Contacto</span>
                         </a>
-                        <a href="https://github.com/juanjo2409" target="_blank" rel="noopener noreferrer" class="btn-icon-link" title="Visitar GitHub">
+                        <a href="https://github.com/juanjo2409" target="_blank" rel="noopener noreferrer" class="social-bubble" title="GitHub">
                             <i class="devicon-github-original"></i>
                         </a>
-                        <a href="https://www.linkedin.com/in/juan-jose-maldonado-navarro" target="_blank" rel="noopener noreferrer" class="btn-icon-link" title="Visitar LinkedIn">
+                        <a href="https://www.linkedin.com/in/juan-jose-maldonado-navarro" target="_blank" rel="noopener noreferrer" class="social-bubble" title="LinkedIn">
                             <i class="devicon-linkedin-plain colored"></i>
                         </a>
                     </div>
-
-                    <!-- Métricas Rápidas Animadas -->
-                    <div class="hero-stats-row">
-                        <div class="hero-stat-item">
-                            <div class="hero-stat-num"><span class="counter" data-target="200">0</span>+</div>
-                            <span class="hero-stat-lbl">Commits Realizados</span>
-                        </div>
-                        <div class="hero-stat-divider"></div>
-                        <div class="hero-stat-item">
-                            <div class="hero-stat-num"><span class="counter" data-target="15">0</span>+</div>
-                            <span class="hero-stat-lbl">Repositorios Públicos</span>
-                        </div>
-                        <div class="hero-stat-divider"></div>
-                        <div class="hero-stat-item">
-                            <div class="hero-stat-num">B2 <small>(C2 Read)</small></div>
-                            <span class="hero-stat-lbl">EF SET Certified</span>
-                        </div>
-                    </div>
                 </div>
 
-                <!-- Columna Derecha: Foto con Animaciones Creativas Flotantes -->
-                <div class="hero-right">
-                    <div class="avatar-stage">
-                        <!-- Anillos giratorios -->
-                        <div class="orbital-ring ring-1"></div>
-                        <div class="orbital-ring ring-2"></div>
-                        <div class="avatar-glow"></div>
+                <!-- Columna Derecha: Foto Nueva MÁS GRANDE con animaciones creativas -->
+                <div class="hero-photo-wrap">
+                    <div class="photo-card-stage">
+                        <!-- Anillos y brillos animados de fondo -->
+                        <div class="photo-orbital orb-spin-1"></div>
+                        <div class="photo-orbital orb-spin-2"></div>
+                        <div class="photo-ambient-glow"></div>
 
-                        <!-- Foto principal con marco estilizado blanco -->
-                        <div class="avatar-card">
-                            <img src="public/img/foto.jpeg" alt="Juan José Maldonado Navarro" class="avatar-img">
+                        <!-- Tarjeta con la foto grande en public/img/foto.jpeg -->
+                        <div class="photo-frame">
+                            <img src="public/img/foto.jpeg" alt="Juan José Maldonado Navarro (juanjo2409)" class="photo-main">
                         </div>
 
-                        <!-- Tarjetas flotantes animadas creativas -->
-                        <div class="float-card card-dotnet">
-                            <div class="float-card-icon"><i class="devicon-dotnetcore-plain colored"></i></div>
-                            <div class="float-card-text">
+                        <!-- Badges flotantes interactivos -->
+                        <div class="float-tag tag-dot-net">
+                            <i class="devicon-dotnetcore-plain colored"></i>
+                            <div>
                                 <strong>.NET 10 & C#</strong>
-                                <span>Clean Architecture</span>
+                                <small>Clean Architecture</small>
                             </div>
                         </div>
 
-                        <div class="float-card card-database">
-                            <div class="float-card-icon"><i class="devicon-postgresql-plain colored"></i></div>
-                            <div class="float-card-text">
-                                <strong>PostgreSQL & EF Core</strong>
-                                <span>LINQ & Migrations</span>
+                        <div class="float-tag tag-docker">
+                            <i class="devicon-docker-plain colored"></i>
+                            <div>
+                                <strong>Docker</strong>
+                                <small>En Producción</small>
                             </div>
                         </div>
 
-                        <div class="float-card card-docker">
-                            <div class="float-card-icon"><i class="devicon-docker-plain colored"></i></div>
-                            <div class="float-card-text">
-                                <strong>Docker Compose</strong>
-                                <span>Entornos en Producción</span>
-                            </div>
-                        </div>
-
-                        <a href="https://cert.efset.org/en/BWqZZk" target="_blank" rel="noopener noreferrer" class="float-card card-english" title="Ver Certificado Oficial">
-                            <div class="float-card-icon">🌍</div>
-                            <div class="float-card-text">
-                                <strong>EF SET English B2</strong>
-                                <span>Reading C2 (75/100) ↗</span>
+                        <a href="https://cert.efset.org/en/BWqZZk" target="_blank" rel="noopener noreferrer" class="float-tag tag-english" title="Ver Certificado EF SET B2">
+                            <span class="tag-flag">🌍</span>
+                            <div>
+                                <strong>Inglés B2</strong>
+                                <small>C2 Reading (75/100) ↗</small>
                             </div>
                         </a>
                     </div>
@@ -192,601 +169,278 @@
             </div>
         </section>
 
-        <!-- =========================================================
-             CARRUSEL MARQUEE INFINITO DE TECNOLOGÍAS
-        ========================================================= -->
-        <section class="marquee-section" aria-label="Tecnologías principales">
-            <div class="marquee-track">
-                <!-- Set 1 -->
-                <div class="marquee-item"><i class="devicon-csharp-plain colored"></i><span>C#</span></div>
-                <div class="marquee-item"><i class="devicon-dotnetcore-plain colored"></i><span>.NET 10</span></div>
-                <div class="marquee-item"><i class="devicon-postgresql-plain colored"></i><span>PostgreSQL</span></div>
-                <div class="marquee-item"><i class="devicon-microsoftsqlserver-plain colored"></i><span>SQL Server</span></div>
-                <div class="marquee-item"><i class="devicon-docker-plain colored"></i><span>Docker</span></div>
-                <div class="marquee-item"><i class="devicon-azure-plain colored"></i><span>Azure</span></div>
-                <div class="marquee-item"><i class="devicon-react-original colored"></i><span>React</span></div>
-                <div class="marquee-item"><i class="devicon-angularjs-plain colored"></i><span>Angular</span></div>
-                <div class="marquee-item"><i class="devicon-typescript-plain colored"></i><span>TypeScript</span></div>
-                <div class="marquee-item"><i class="devicon-tailwindcss-original colored"></i><span>Tailwind CSS</span></div>
-                <div class="marquee-item"><i class="devicon-nodejs-plain colored"></i><span>Node.js</span></div>
-                <div class="marquee-item"><i class="devicon-express-original"></i><span>Express.js</span></div>
-                <div class="marquee-item"><i class="devicon-mysql-plain colored"></i><span>MySQL</span></div>
-                <div class="marquee-item"><i class="devicon-git-plain colored"></i><span>Git & GitHub</span></div>
-
-                <!-- Set 2 (duplicado para scroll sin saltos) -->
-                <div class="marquee-item"><i class="devicon-csharp-plain colored"></i><span>C#</span></div>
-                <div class="marquee-item"><i class="devicon-dotnetcore-plain colored"></i><span>.NET 10</span></div>
-                <div class="marquee-item"><i class="devicon-postgresql-plain colored"></i><span>PostgreSQL</span></div>
-                <div class="marquee-item"><i class="devicon-microsoftsqlserver-plain colored"></i><span>SQL Server</span></div>
-                <div class="marquee-item"><i class="devicon-docker-plain colored"></i><span>Docker</span></div>
-                <div class="marquee-item"><i class="devicon-azure-plain colored"></i><span>Azure</span></div>
-                <div class="marquee-item"><i class="devicon-react-original colored"></i><span>React</span></div>
-                <div class="marquee-item"><i class="devicon-angularjs-plain colored"></i><span>Angular</span></div>
-                <div class="marquee-item"><i class="devicon-typescript-plain colored"></i><span>TypeScript</span></div>
-                <div class="marquee-item"><i class="devicon-tailwindcss-original colored"></i><span>Tailwind CSS</span></div>
-                <div class="marquee-item"><i class="devicon-nodejs-plain colored"></i><span>Node.js</span></div>
-                <div class="marquee-item"><i class="devicon-express-original"></i><span>Express.js</span></div>
-                <div class="marquee-item"><i class="devicon-mysql-plain colored"></i><span>MySQL</span></div>
-                <div class="marquee-item"><i class="devicon-git-plain colored"></i><span>Git & GitHub</span></div>
+        <!-- Marquee de Tecnologías Continuo -->
+        <div class="marquee-strip">
+            <div class="marquee-content">
+                <span><i class="devicon-csharp-plain colored"></i> C#</span>
+                <span><i class="devicon-dotnetcore-plain colored"></i> .NET Core</span>
+                <span><i class="devicon-postgresql-plain colored"></i> PostgreSQL</span>
+                <span><i class="devicon-microsoftsqlserver-plain colored"></i> SQL Server</span>
+                <span><i class="devicon-docker-plain colored"></i> Docker</span>
+                <span><i class="devicon-azure-plain colored"></i> Azure</span>
+                <span><i class="devicon-react-original colored"></i> React</span>
+                <span><i class="devicon-typescript-plain colored"></i> TypeScript</span>
+                <span><i class="devicon-tailwindcss-original colored"></i> Tailwind CSS</span>
+                <span><i class="devicon-nodejs-plain colored"></i> Node.js</span>
+                <span><i class="devicon-git-plain colored"></i> Git & GitHub</span>
+                <!-- Duplicado para loop infinito -->
+                <span><i class="devicon-csharp-plain colored"></i> C#</span>
+                <span><i class="devicon-dotnetcore-plain colored"></i> .NET Core</span>
+                <span><i class="devicon-postgresql-plain colored"></i> PostgreSQL</span>
+                <span><i class="devicon-microsoftsqlserver-plain colored"></i> SQL Server</span>
+                <span><i class="devicon-docker-plain colored"></i> Docker</span>
+                <span><i class="devicon-azure-plain colored"></i> Azure</span>
+                <span><i class="devicon-react-original colored"></i> React</span>
+                <span><i class="devicon-typescript-plain colored"></i> TypeScript</span>
+                <span><i class="devicon-tailwindcss-original colored"></i> Tailwind CSS</span>
+                <span><i class="devicon-nodejs-plain colored"></i> Node.js</span>
+                <span><i class="devicon-git-plain colored"></i> Git & GitHub</span>
             </div>
-        </section>
+        </div>
 
         <!-- =========================================================
-             3. PROYECTOS DESTACADOS
+             PROYECTOS: CON IMÁGENES/MOCKUPS VISUALES Y ANIMACIONES
         ========================================================= -->
-        <section class="section" id="proyectos">
+        <section class="section-wrap" id="proyectos">
             <div class="container">
-                <div class="section-header">
-                    <div class="badge-tag">💼 Mi Trabajo & Proyectos Reales</div>
-                    <h2 class="section-title">Portafolio de <span>Proyectos</span></h2>
-                    <p class="section-desc">
-                        Soluciones de software empresariales y en producción construidas con arquitecturas desacopladas, pruebas de negocio y código limpio.
-                    </p>
+                <div class="section-title-box">
+                    <span class="mini-badge">Portafolio</span>
+                    <h2>Proyectos <span>Destacados</span></h2>
+                    <p>Aplicaciones reales con arquitectura limpia, reglas de negocio y código en GitHub.</p>
                 </div>
 
-                <!-- Filtros Interactivos -->
-                <div class="project-filters">
-                    <button class="filter-btn active" data-filter="all">Todos (6)</button>
-                    <button class="filter-btn" data-filter="dotnet">🟣 Backend .NET & Clean Arch</button>
-                    <button class="filter-btn" data-filter="fullstack">🌐 Full Stack & En Producción</button>
-                    <button class="filter-btn" data-filter="other">⚡ Otros Proyectos</button>
-                </div>
-
-                <div class="portfolio-grid">
+                <div class="projects-grid">
 
                     <!-- PROYECTO 1: FrameRent -->
-                    <article class="proyecto-card featured" data-category="dotnet">
-                        <div class="project-badge">🏆 Flagship .NET</div>
-                        <div class="project-top-header">
-                            <div class="project-icon-box purple">🎬</div>
-                            <div class="project-tags">
-                                <span class="tag tag-purple">CLEAN ARCHITECTURE</span>
-                                <span class="tag tag-blue">DOCKER COMPOSE</span>
-                                <span class="tag tag-emerald">JWT & IDENTITY</span>
+                    <article class="project-box">
+                        <!-- Mockup Visual Creativo -->
+                        <div class="project-mockup mockup-framerent">
+                            <div class="mockup-bar">
+                                <span class="mock-dot red"></span>
+                                <span class="mock-dot yellow"></span>
+                                <span class="mock-dot green"></span>
+                                <span class="mock-title">framerent.api / rental-system</span>
+                            </div>
+                            <div class="mockup-screen">
+                                <div class="mock-badge-status">● Sistema de Alquiler Audiovisual</div>
+                                <div class="mock-code-line"><span>status:</span> <b class="c-green">Approved</b></div>
+                                <div class="mock-code-line"><span>architecture:</span> <b class="c-blue">Clean Architecture 4-Layers</b></div>
+                                <div class="mock-code-line"><span>rule:</span> <b>No-Overlap Date Validations</b></div>
                             </div>
                         </div>
 
-                        <h3 class="project-title">FrameRent — Plataforma de Alquiler Audiovisual</h3>
-                        <p class="project-desc">
-                            Sistema completo de gestión y alquiler de equipos de cine y televisión bajo estándares empresariales con <strong>Clean Architecture</strong>, máquinas de estado en entidades de dominio y <strong>Value Objects</strong>.
-                        </p>
-
-                        <div class="project-feature-list">
-                            <div class="feature-item">
-                                <span class="feature-bullet">✓</span>
-                                <span><strong>Disponibilidad de Stock:</strong> Consultas LINQ optimizadas contra traslapes de fechas.</span>
+                        <div class="project-info">
+                            <div class="project-labels">
+                                <span class="lbl-tag purple">.NET / C#</span>
+                                <span class="lbl-tag blue">PostgreSQL</span>
+                                <span class="lbl-tag dark">Docker</span>
                             </div>
-                            <div class="feature-item">
-                                <span class="feature-bullet">✓</span>
-                                <span><strong>State Machine:</strong> Ciclo <code>Pending</code> ➔ <code>Approved</code> ➔ <code>Delivered</code> ➔ <code>Returned</code> con cobro automático de mora (<code>LateFee</code>).</span>
+                            <h3>FrameRent — Alquiler Audiovisual</h3>
+                            <p>
+                                Plataforma construida con Clean Architecture y Domain-Driven Design para gestionar contratos de alquiler, disponibilidad de stock y cálculo automatizado de mora (<code>LateFee</code>).
+                            </p>
+                            <div class="project-links">
+                                <a href="https://github.com/juanjo2409/FrameRent" target="_blank" rel="noopener noreferrer" class="link-btn primary">
+                                    <i class="devicon-github-original"></i>
+                                    <span>Ver Código</span>
+                                    <span>↗</span>
+                                </a>
                             </div>
-                            <div class="feature-item">
-                                <span class="feature-bullet">✓</span>
-                                <span><strong>Reglas de Negocio:</strong> Máximo 15 días y hasta 3 alquileres activos concurrentes por cliente.</span>
-                            </div>
-                        </div>
-
-                        <div class="project-tech-row">
-                            <span class="tech-chip"><i class="devicon-csharp-plain colored"></i> C# / .NET</span>
-                            <span class="tech-chip"><i class="devicon-dotnetcore-plain colored"></i> ASP.NET Core API</span>
-                            <span class="tech-chip"><i class="devicon-postgresql-plain colored"></i> PostgreSQL</span>
-                            <span class="tech-chip"><i class="devicon-docker-plain colored"></i> Docker</span>
-                        </div>
-
-                        <div class="project-actions">
-                            <a href="https://github.com/juanjo2409/FrameRent" target="_blank" rel="noopener noreferrer" class="btn-card-primary">
-                                <i class="devicon-github-original"></i>
-                                <span>Ver Repositorio</span>
-                                <span>↗</span>
-                            </a>
-                            <button class="btn-card-secondary js-open-modal" data-project="framerent">
-                                <span>🏛️ Ver Arquitectura</span>
-                            </button>
                         </div>
                     </article>
 
                     <!-- PROYECTO 2: SkillHub -->
-                    <article class="proyecto-card featured" data-category="dotnet">
-                        <div class="project-badge blue">📚 .NET 10 & DDD</div>
-                        <div class="project-top-header">
-                            <div class="project-icon-box blue">🎓</div>
-                            <div class="project-tags">
-                                <span class="tag tag-blue">.NET 10</span>
-                                <span class="tag tag-purple">DDD & SOLID</span>
-                                <span class="tag tag-amber">QUESTPDF & EPPLUS</span>
+                    <article class="project-box">
+                        <!-- Mockup Visual Creativo -->
+                        <div class="project-mockup mockup-skillhub">
+                            <div class="mockup-bar">
+                                <span class="mock-dot red"></span>
+                                <span class="mock-dot yellow"></span>
+                                <span class="mock-dot green"></span>
+                                <span class="mock-title">skillhub.api / .net-10</span>
+                            </div>
+                            <div class="mockup-screen">
+                                <div class="mock-badge-status">● Gestión de Talleres y Matrículas</div>
+                                <div class="mock-code-line"><span>reports:</span> <b class="c-purple">QuestPDF & EPPlus</b></div>
+                                <div class="mock-code-line"><span>framework:</span> <b class="c-blue">.NET 10 + EF Core</b></div>
+                                <div class="mock-code-line"><span>docs:</span> <b class="c-green">Scalar OpenAPI</b></div>
                             </div>
                         </div>
 
-                        <h3 class="project-title">SkillHub — Gestión de Talleres y Matrículas</h3>
-                        <p class="project-desc">
-                            Plataforma de capacitación empresarial construida con <strong>Domain-Driven Design (DDD)</strong> para la gestión estricta de cupos, prevención de duplicados y emisión de certificados académicos.
-                        </p>
-
-                        <div class="project-feature-list">
-                            <div class="feature-item">
-                                <span class="feature-bullet">✓</span>
-                                <span><strong>Reglas Académicas:</strong> Validación automática de cruces de horario y auditoría de matrículas.</span>
+                        <div class="project-info">
+                            <div class="project-labels">
+                                <span class="lbl-tag blue">.NET 10</span>
+                                <span class="lbl-tag purple">DDD & SOLID</span>
+                                <span class="lbl-tag green">QuestPDF</span>
                             </div>
-                            <div class="feature-item">
-                                <span class="feature-bullet">✓</span>
-                                <span><strong>Ingeniería Documental:</strong> Ingesta masiva desde Excel con <strong>EPPlus</strong> y certificados PDF dinámicos con <strong>QuestPDF</strong>.</span>
+                            <h3>SkillHub — Talleres y Certificados</h3>
+                            <p>
+                                Sistema para centros de formación con control de cupos, prevención de inscripciones duplicadas, carga masiva desde Excel y diplomas PDF autogenerados.
+                            </p>
+                            <div class="project-links">
+                                <a href="https://github.com/juanjo2409/SkillHub" target="_blank" rel="noopener noreferrer" class="link-btn primary">
+                                    <i class="devicon-github-original"></i>
+                                    <span>Ver Código</span>
+                                    <span>↗</span>
+                                </a>
                             </div>
-                            <div class="feature-item">
-                                <span class="feature-bullet">✓</span>
-                                <span><strong>Documentación:</strong> UI interactiva de OpenAPI mediante <strong>Scalar</strong>.</span>
-                            </div>
-                        </div>
-
-                        <div class="project-tech-row">
-                            <span class="tech-chip"><i class="devicon-dotnetcore-plain colored"></i> .NET 10</span>
-                            <span class="tech-chip"><i class="devicon-postgresql-plain colored"></i> PostgreSQL</span>
-                            <span class="tech-chip"><i class="devicon-tailwindcss-original colored"></i> Tailwind CSS</span>
-                        </div>
-
-                        <div class="project-actions">
-                            <a href="https://github.com/juanjo2409/SkillHub" target="_blank" rel="noopener noreferrer" class="btn-card-primary">
-                                <i class="devicon-github-original"></i>
-                                <span>Ver Repositorio</span>
-                                <span>↗</span>
-                            </a>
-                            <button class="btn-card-secondary js-open-modal" data-project="skillhub">
-                                <span>🏛️ Ver Arquitectura</span>
-                            </button>
                         </div>
                     </article>
 
                     <!-- PROYECTO 3: PsicoBitácoras (En Producción) -->
-                    <article class="proyecto-card full-width" data-category="fullstack">
-                        <div class="project-badge emerald">🟢 En Producción Real</div>
-                        <div class="project-top-header">
-                            <div class="project-icon-box emerald">🧠</div>
-                            <div class="project-tags">
-                                <span class="tag tag-emerald">EN PRODUCCIÓN</span>
-                                <span class="tag tag-blue">REACT + TAILWIND V4</span>
-                                <span class="tag tag-purple">NODE.JS & MYSQL</span>
+                    <article class="project-box project-featured">
+                        <div class="project-mockup mockup-psicobitacoras">
+                            <div class="mockup-bar">
+                                <span class="mock-dot red"></span>
+                                <span class="mock-dot yellow"></span>
+                                <span class="mock-dot green"></span>
+                                <span class="mock-title">https://www.daleunclick.online</span>
+                            </div>
+                            <div class="mockup-screen">
+                                <div class="mock-badge-status live">🟢 En Producción Real</div>
+                                <div class="mock-code-line"><span>frontend:</span> <b class="c-blue">React (Vite) + Tailwind v4</b></div>
+                                <div class="mock-code-line"><span>backend:</span> <b class="c-green">Node.js + Express API</b></div>
+                                <div class="mock-code-line"><span>db:</span> <b>MySQL Relational Database</b></div>
                             </div>
                         </div>
 
-                        <h3 class="project-title">PsicoBitácoras — Plataforma de Cartillas Terapéuticas y Citas</h3>
-                        <p class="project-desc">
-                            Aplicación web clínica desplegada en producción para usuarios reales, permitiendo interactuar con cartillas terapéuticas digitales, registrar reflexiones personales y agendar consultas de salud mental.
-                        </p>
-
-                        <div class="project-feature-list">
-                            <div class="feature-item">
-                                <span class="feature-bullet">✓</span>
-                                <span><strong>Impacto Real:</strong> En producción activa en <strong>daleunclick.online</strong> con clientes activos.</span>
+                        <div class="project-info">
+                            <div class="project-labels">
+                                <span class="lbl-tag green">En Producción</span>
+                                <span class="lbl-tag blue">React</span>
+                                <span class="lbl-tag purple">Tailwind v4</span>
                             </div>
-                            <div class="feature-item">
-                                <span class="feature-bullet">✓</span>
-                                <span><strong>Frontend Reactivo:</strong> Interfaz moderna con <strong>React (Vite)</strong> y <strong>Tailwind CSS v4</strong>.</span>
+                            <h3>PsicoBitácoras — Plataforma Terapéutica</h3>
+                            <p>
+                                Aplicación web activa para salud mental y bienestar emocional. Permite interactuar con cartillas terapéuticas, registrar reflexiones clínicas y agendar citas.
+                            </p>
+                            <div class="project-links">
+                                <a href="https://www.daleunclick.online" target="_blank" rel="noopener noreferrer" class="link-btn live">
+                                    <span>🌐 Abrir Sitio en Vivo (daleunclick.online)</span>
+                                    <span>↗</span>
+                                </a>
+                                <a href="https://github.com/juanjo2409/JProyectoPaginaClinicaPsicologica" target="_blank" rel="noopener noreferrer" class="link-btn secondary">
+                                    <i class="devicon-github-original"></i>
+                                    <span>GitHub</span>
+                                </a>
                             </div>
-                            <div class="feature-item">
-                                <span class="feature-bullet">✓</span>
-                                <span><strong>Backend Modular:</strong> REST API estructurada con <strong>Node.js + Express</strong> y base de datos relacional <strong>MySQL</strong>.</span>
-                            </div>
-                        </div>
-
-                        <div class="project-tech-row">
-                            <span class="tech-chip"><i class="devicon-react-original colored"></i> React (Vite)</span>
-                            <span class="tech-chip"><i class="devicon-tailwindcss-original colored"></i> Tailwind CSS v4</span>
-                            <span class="tech-chip"><i class="devicon-nodejs-plain colored"></i> Node.js & Express</span>
-                            <span class="tech-chip"><i class="devicon-mysql-plain colored"></i> MySQL</span>
-                        </div>
-
-                        <div class="project-actions">
-                            <a href="https://www.daleunclick.online" target="_blank" rel="noopener noreferrer" class="btn-card-emerald">
-                                <span>🌐 Visitar Sitio en Producción (daleunclick.online)</span>
-                                <span>↗</span>
-                            </a>
-                            <a href="https://github.com/juanjo2409/JProyectoPaginaClinicaPsicologica" target="_blank" rel="noopener noreferrer" class="btn-card-secondary">
-                                <i class="devicon-github-original"></i>
-                                <span>Código en GitHub</span>
-                            </a>
                         </div>
                     </article>
 
-                    <!-- PROYECTO 4: Clínica Veterinaria C# & SQL Server -->
-                    <article class="proyecto-card" data-category="dotnet">
-                        <div class="project-top-header">
-                            <div class="project-icon-box purple">🏥</div>
-                            <div class="project-tags">
-                                <span class="tag tag-purple">C# & .NET</span>
-                                <span class="tag tag-blue">SQL SERVER</span>
+                    <!-- PROYECTO 4: Clínica Veterinaria -->
+                    <article class="project-box">
+                        <div class="project-mockup mockup-vet">
+                            <div class="mockup-bar">
+                                <span class="mock-dot red"></span>
+                                <span class="mock-dot yellow"></span>
+                                <span class="mock-dot green"></span>
+                                <span class="mock-title">veterinaria.cli / sql-server</span>
+                            </div>
+                            <div class="mockup-screen">
+                                <div class="mock-badge-status">● Gestión Veterinaria</div>
+                                <div class="mock-code-line"><span>language:</span> <b class="c-purple">C# & .NET</b></div>
+                                <div class="mock-code-line"><span>database:</span> <b class="c-blue">SQL Server</b></div>
                             </div>
                         </div>
 
-                        <h3 class="project-title">Sistema de Gestión Veterinaria</h3>
-                        <p class="project-desc">
-                            Sistema en consola profesional (CLI) para la gestión integral de pacientes, historiales médicos de dueños y agenda de citas clínicas veterinarias.
-                        </p>
-
-                        <div class="project-tech-row">
-                            <span class="tech-chip"><i class="devicon-csharp-plain colored"></i> C#</span>
-                            <span class="tech-chip"><i class="devicon-dotnetcore-plain colored"></i> .NET</span>
-                            <span class="tech-chip"><i class="devicon-microsoftsqlserver-plain colored"></i> SQL Server</span>
-                        </div>
-
-                        <div class="project-actions">
-                            <a href="https://github.com/juanjo2409/JProyectoC-ClinicaDeMascotas" target="_blank" rel="noopener noreferrer" class="btn-card-primary">
-                                <i class="devicon-github-original"></i>
-                                <span>Ver en GitHub</span>
-                                <span>↗</span>
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- PROYECTO 5: TaskFlow SPA -->
-                    <article class="proyecto-card" data-category="fullstack">
-                        <div class="project-top-header">
-                            <div class="project-icon-box blue">⚡</div>
-                            <div class="project-tags">
-                                <span class="tag tag-blue">SPA ARCHITECTURE</span>
-                                <span class="tag tag-emerald">JAVASCRIPT ES6+</span>
+                        <div class="project-info">
+                            <div class="project-labels">
+                                <span class="lbl-tag purple">C#</span>
+                                <span class="lbl-tag blue">SQL Server</span>
+                            </div>
+                            <h3>Gestión para Clínica Veterinaria</h3>
+                            <p>
+                                Software de gestión para control de pacientes, historias clínicas de mascotas y administración de citas médicas.
+                            </p>
+                            <div class="project-links">
+                                <a href="https://github.com/juanjo2409/JProyectoC-ClinicaDeMascotas" target="_blank" rel="noopener noreferrer" class="link-btn primary">
+                                    <i class="devicon-github-original"></i>
+                                    <span>Ver Código</span>
+                                    <span>↗</span>
+                                </a>
                             </div>
                         </div>
-
-                        <h3 class="project-title">TaskFlow SPA — Gestión de Tareas</h3>
-                        <p class="project-desc">
-                            Aplicación interactiva de página única (SPA) para la organización de flujos de trabajo, tableros dinámicos y seguimiento de tareas sin recarga de página.
-                        </p>
-
-                        <div class="project-tech-row">
-                            <span class="tech-chip"><i class="devicon-javascript-plain colored"></i> JavaScript</span>
-                            <span class="tech-chip"><i class="devicon-html5-plain colored"></i> HTML5</span>
-                            <span class="tech-chip"><i class="devicon-css3-plain colored"></i> CSS3</span>
-                        </div>
-
-                        <div class="project-actions">
-                            <a href="https://github.com/juanjo2409/TaskFlowSpa" target="_blank" rel="noopener noreferrer" class="btn-card-primary">
-                                <i class="devicon-github-original"></i>
-                                <span>Ver en GitHub</span>
-                                <span>↗</span>
-                            </a>
-                        </div>
                     </article>
 
-                    <!-- PROYECTO 6: Inventario Python -->
-                    <article class="proyecto-card" data-category="other">
-                        <div class="project-top-header">
-                            <div class="project-icon-box emerald">📦</div>
-                            <div class="project-tags">
-                                <span class="tag tag-emerald">PYTHON</span>
-                                <span class="tag tag-amber">INVENTARIOS</span>
-                            </div>
-                        </div>
-
-                        <h3 class="project-title">Sistema de Control de Inventario</h3>
-                        <p class="project-desc">
-                            Software de consola en Python para la administración de stock, control de productos, registro de entradas/salidas y validación de consistencia.
-                        </p>
-
-                        <div class="project-tech-row">
-                            <span class="tech-chip"><i class="devicon-python-plain colored"></i> Python</span>
-                            <span class="tech-chip"><i class="devicon-git-plain colored"></i> Git</span>
-                        </div>
-
-                        <div class="project-actions">
-                            <a href="https://github.com/juanjo2409/JProyectoConsolaPythonInventario" target="_blank" rel="noopener noreferrer" class="btn-card-primary">
-                                <i class="devicon-github-original"></i>
-                                <span>Ver en GitHub</span>
-                                <span>↗</span>
-                            </a>
-                        </div>
-                    </article>
-
-                </div>
-
-                <div class="github-cta-banner">
-                    <div class="github-cta-content">
-                        <h3>¿Quieres ver más de mi trabajo y contribuciones?</h3>
-                        <p>Explora mis repositorios abiertos, ramas activas y commits en mi perfil oficial de GitHub.</p>
-                    </div>
-                    <a href="https://github.com/juanjo2409?tab=repositories" target="_blank" rel="noopener noreferrer" class="btn-primary">
-                        <i class="devicon-github-original"></i>
-                        <span>Explorar Repositorios en GitHub</span>
-                        <span>↗</span>
-                    </a>
                 </div>
             </div>
         </section>
 
         <!-- =========================================================
-             4. SERVICIOS & ESPECIALIDADES (ARQUITECTURA, BACKEND, WEB, DEVOPS)
+             SERVICIOS: VISUALES, CREATIVOS Y DIRECTOS AL GRANO
         ========================================================= -->
-        <section class="section section-light" id="servicios">
+        <section class="section-wrap bg-light" id="servicios">
             <div class="container">
-                <div class="section-header">
-                    <div class="badge-tag">⚡ Capacidades Técnicas</div>
-                    <h2 class="section-title">Servicios & <span>Especialidades</span></h2>
-                    <p class="section-desc">
-                        Aporto valor a los equipos de ingeniería a través de arquitectura de software desacoplada, APIs de alta confiabilidad y frontends modernos.
-                    </p>
+                <div class="section-title-box">
+                    <span class="mini-badge">Especialidades</span>
+                    <h2>Mis <span>Servicios</span></h2>
+                    <p>Enfoque técnico sólido para diseñar, desarrollar y desplegar software mantenible.</p>
                 </div>
 
-                <!-- Grid de Servicios Principales -->
-                <div class="services-grid">
+                <div class="services-grid-clean">
 
                     <!-- Servicio 1: Arquitectura de Software -->
-                    <div class="service-card">
-                        <div class="service-icon-wrapper purple">
-                            <span>🏛️</span>
+                    <div class="service-box">
+                        <div class="service-icon-bubble purple">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="3" y1="9" x2="21" y2="9"></line>
+                                <line x1="9" y1="21" x2="9" y2="9"></line>
+                            </svg>
                         </div>
-                        <h3>Arquitectura de Software & Clean Arch</h3>
-                        <p>
-                            Diseño de sistemas estructurados en 4 capas estrictas (<em>Domain, Application, Infrastructure, Presentation</em>). Aplicación de Domain-Driven Design (DDD), principios SOLID y patrones de diseño para código mantenible a largo plazo.
-                        </p>
-                        <ul class="service-bullets">
-                            <li>Separación estricta de responsabilidades sin dependencias en el Dominio.</li>
-                            <li>Entidades ricas con máquinas de estado y Value Objects inmutables.</li>
-                            <li>Manejo de errores profesional con <em>Result Pattern</em> y middleware global RFC 7807.</li>
-                        </ul>
-                        <div class="service-tags">
-                            <span class="s-tag">Clean Architecture</span>
-                            <span class="s-tag">DDD</span>
-                            <span class="s-tag">SOLID</span>
-                            <span class="s-tag">CQRS / MediatR</span>
+                        <h3>Arquitectura de Software</h3>
+                        <p>Diseño de sistemas estructurados con <strong>Clean Architecture</strong> y <strong>Domain-Driven Design (DDD)</strong>. Separación estricta de responsabilidades, entidades con máquinas de estado y código desacoplado.</p>
+                        <div class="service-chips">
+                            <span>Clean Architecture</span>
+                            <span>DDD</span>
+                            <span>SOLID</span>
+                            <span>Result Pattern</span>
                         </div>
                     </div>
 
                     <!-- Servicio 2: Backend .NET & APIs -->
-                    <div class="service-card">
-                        <div class="service-icon-wrapper blue">
+                    <div class="service-box">
+                        <div class="service-icon-bubble blue">
                             <i class="devicon-dotnetcore-plain colored"></i>
                         </div>
-                        <h3>Desarrollo Backend (.NET & APIs RESTful)</h3>
-                        <p>
-                            Construcción de servicios backend robustos y seguros con ASP.NET Core Web API (.NET 8, 9 y 10). Persistencia eficiente con Entity Framework Core sobre PostgreSQL, SQL Server o MySQL.
-                        </p>
-                        <ul class="service-bullets">
-                            <li>Autenticación y autorización basada en roles (RBAC) con ASP.NET Identity y JWT.</li>
-                            <li>Consultas LINQ optimizadas con <code>AsNoTracking()</code> y migraciones Code-First.</li>
-                            <li>Generación de reportes PDF con QuestPDF y exportaciones Excel con EPPlus.</li>
-                        </ul>
-                        <div class="service-tags">
-                            <span class="s-tag">ASP.NET Core Web API</span>
-                            <span class="s-tag">C# Moderno</span>
-                            <span class="s-tag">EF Core</span>
-                            <span class="s-tag">PostgreSQL</span>
+                        <h3>Backend & APIs RESTful</h3>
+                        <p>Construcción de APIs de alto rendimiento con <strong>ASP.NET Core</strong> (.NET 8/10). Persistencia eficiente con <strong>EF Core</strong> sobre <strong>PostgreSQL</strong> o <strong>SQL Server</strong> y seguridad con JWT & Identity.</p>
+                        <div class="service-chips">
+                            <span>ASP.NET Core</span>
+                            <span>EF Core</span>
+                            <span>PostgreSQL</span>
+                            <span>JWT Auth</span>
                         </div>
                     </div>
 
                     <!-- Servicio 3: Desarrollo Web Frontend -->
-                    <div class="service-card">
-                        <div class="service-icon-wrapper emerald">
+                    <div class="service-box">
+                        <div class="service-icon-bubble emerald">
                             <i class="devicon-react-original colored"></i>
                         </div>
-                        <h3>Desarrollo Web Frontend (React & Angular)</h3>
-                        <p>
-                            Creación de aplicaciones web SPA reactivas, responsivas y fuertemente tipadas en TypeScript. Enfoque mobile-first y componentes modulares con Tailwind CSS y Bootstrap.
-                        </p>
-                        <ul class="service-bullets">
-                            <li>Aplicaciones con React (Hooks, Vite) y Angular (Signals, RxJS Observables).</li>
-                            <li>Consumo de APIs RESTful mediante servicios HTTP tipados con tipado estricto.</li>
-                            <li>Diseño adaptable, limpio, accesible y centrado en la experiencia de usuario (UX).</li>
-                        </ul>
-                        <div class="service-tags">
-                            <span class="s-tag">React + TS</span>
-                            <span class="s-tag">Angular</span>
-                            <span class="s-tag">Tailwind CSS</span>
-                            <span class="s-tag">TypeScript</span>
+                        <h3>Desarrollo Web Frontend</h3>
+                        <p>Desarrollo de Single Page Applications (SPA) reactivas y adaptadas para móviles con <strong>React</strong>, <strong>Angular</strong> y <strong>TypeScript</strong>, utilizando <strong>Tailwind CSS</strong> para interfaces rápidas y limpias.</p>
+                        <div class="service-chips">
+                            <span>React + Vite</span>
+                            <span>TypeScript</span>
+                            <span>Tailwind CSS</span>
+                            <span>Responsive UX</span>
                         </div>
                     </div>
 
-                    <!-- Servicio 4: DevOps & Cloud -->
-                    <div class="service-card">
-                        <div class="service-icon-wrapper orange">
+                    <!-- Servicio 4: DevOps & Despliegues -->
+                    <div class="service-box">
+                        <div class="service-icon-bubble orange">
                             <i class="devicon-docker-plain colored"></i>
                         </div>
-                        <h3>DevOps, Contenedores & Cloud</h3>
-                        <p>
-                            Contenerización completa con Docker Compose para garantizar paridad entre desarrollo y producción. Despliegues en la nube con Microsoft Azure y pipelines de integración continua.
-                        </p>
-                        <ul class="service-bullets">
-                            <li>Configuración de entornos multicontenedor (API + Base de Datos + Client).</li>
-                            <li>Servicios en Microsoft Azure (App Services, Key Vault y bases de datos cloud).</li>
-                            <li>Automatización con GitHub Actions y documentación OpenAPI interactiva con Scalar.</li>
-                        </ul>
-                        <div class="service-tags">
-                            <span class="s-tag">Docker Compose</span>
-                            <span class="s-tag">Microsoft Azure</span>
-                            <span class="s-tag">GitHub Actions</span>
-                            <span class="s-tag">Scalar</span>
+                        <h3>DevOps & Contenedores</h3>
+                        <p>Contenerización con <strong>Docker Compose</strong> para garantizar que el software funcione de forma idéntica en desarrollo y en servidores. Despliegues en la nube y documentación con <strong>Scalar</strong>.</p>
+                        <div class="service-chips">
+                            <span>Docker</span>
+                            <span>Azure</span>
+                            <span>GitHub Actions</span>
+                            <span>Scalar Docs</span>
                         </div>
-                    </div>
-
-                </div>
-
-                <!-- Visor Interactivo de Clean Architecture (Demostración Práctica) -->
-                <div class="arch-showcase-box">
-                    <div class="arch-box-header">
-                        <div class="arch-badge">DEMO INTERACTIVA</div>
-                        <h3>Explorador de Arquitectura Limpia (.NET)</h3>
-                        <p>Haz clic en cada capa para ver cómo se estructuran mis soluciones de software:</p>
-                    </div>
-
-                    <div class="arch-box-content">
-                        <!-- Navegación de Capas -->
-                        <div class="arch-layer-buttons">
-                            <button class="layer-pill active" data-layer="domain">
-                                <strong>1. Domain (Núcleo)</strong>
-                                <span>Cero dependencias · Entidades puras</span>
-                            </button>
-                            <button class="layer-pill" data-layer="application">
-                                <strong>2. Application</strong>
-                                <span>Casos de uso · Interfaces y contratos</span>
-                            </button>
-                            <button class="layer-pill" data-layer="infrastructure">
-                                <strong>3. Infrastructure</strong>
-                                <span>EF Core · PostgreSQL · Azure · QuestPDF</span>
-                            </button>
-                            <button class="layer-pill" data-layer="presentation">
-                                <strong>4. Presentation</strong>
-                                <span>ASP.NET Core API · JWT · Scalar Docs</span>
-                            </button>
-                        </div>
-
-                        <!-- Panel de Información de la Capa -->
-                        <div class="arch-layer-detail" id="archLayerDetail">
-                            <div class="detail-header">
-                                <h4 id="archDisplayTitle">Capa Domain (Núcleo Puro)</h4>
-                                <span class="rule-badge" id="archDisplayRule">Regla: Cero dependencias externas</span>
-                            </div>
-                            <p id="archDisplayDesc">
-                                Contiene las entidades esenciales de negocio con máquinas de estado, Value Objects inmutables y reglas de validación sin acoplamiento a bases de datos ni frameworks web.
-                            </p>
-                            <div class="detail-folders">
-                                <strong>Estructura interna:</strong>
-                                <ul id="archDisplayFolders">
-                                    <li>📁 Entities/ (User.cs, Rental.cs, Workshop.cs)</li>
-                                    <li>📁 ValueObjects/ (Email.cs, Money.cs, DateRange.cs)</li>
-                                    <li>📁 Exceptions/ (DomainRuleValidationException.cs)</li>
-                                </ul>
-                            </div>
-                            <div class="detail-principles" id="archDisplayPrinciples">
-                                <span>⚡ SOLID</span>
-                                <span>⚡ Inmutabilidad</span>
-                                <span>⚡ DDD Puro</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- =========================================================
-             5. FORMACIÓN (SENA + RIWI) & INGLÉS EF SET B2
-        ========================================================= -->
-        <section class="section" id="trayectoria">
-            <div class="container">
-                <div class="section-header">
-                    <div class="badge-tag">🎓 Credenciales</div>
-                    <h2 class="section-title">Trayectoria & <span>Dominio del Inglés</span></h2>
-                    <p class="section-desc">
-                        Bases técnicas rigurosas respaldadas por formación tecnológica oficial, entrenamiento de alto rendimiento y certificación internacional de inglés.
-                    </p>
-                </div>
-
-                <div class="credentials-grid">
-
-                    <!-- Formación Académica -->
-                    <div class="cred-card">
-                        <h3 class="cred-card-title">🚀 Formación Tecnológica</h3>
-
-                        <div class="timeline-clean">
-                            <div class="timeline-step">
-                                <div class="step-dot purple"></div>
-                                <div class="step-body">
-                                    <span class="step-time">Cohort 5 · Clan C#</span>
-                                    <h4>Riwi — Formación Intensiva de Software</h4>
-                                    <p>Entrenamiento inmersivo de alto rendimiento centrado en Clean Architecture con .NET / C#, buenas prácticas de ingeniería, bases de datos e inmersión diaria en inglés.</p>
-                                </div>
-                            </div>
-
-                            <div class="timeline-step">
-                                <div class="step-dot blue"></div>
-                                <div class="step-body">
-                                    <span class="step-time">Tecnólogo Titulado</span>
-                                    <h4>SENA — Análisis y Desarrollo de Software (ADSO)</h4>
-                                    <p>Formación tecnológica integral en diseño de bases de datos, patrones de arquitectura de software y metodologías ágiles de ingeniería.</p>
-                                </div>
-                            </div>
-
-                            <div class="timeline-step">
-                                <div class="step-dot emerald"></div>
-                                <div class="step-body">
-                                    <span class="step-time">Experiencia Freelance</span>
-                                    <h4>Desarrollo de Soluciones en Producción</h4>
-                                    <p>Desarrollo end-to-end y puesta en marcha de aplicaciones reales como PsicoBitácoras, FrameRent y SkillHub con clientes activos.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Inglés Certificado EF SET B2 -->
-                    <div class="cred-card english-card">
-                        <div class="english-badge-row">
-                            <span class="cert-status-pill">📜 Certificación Oficial</span>
-                            <div class="efset-grade-badge">
-                                <strong>B2</strong>
-                                <span>Upper Intermediate</span>
-                            </div>
-                        </div>
-
-                        <h3 class="cred-card-title">EF SET English Certificate</h3>
-                        <p class="english-overall">Puntaje Global: <strong>57 / 100 (Nivel B2)</strong></p>
-                        <p class="english-summary">
-                            Capacidad profesional para comprender especificaciones técnicas complejas, RFCs y literatura de arquitectura de software a nivel <strong>C2 Proficient</strong>.
-                        </p>
-
-                        <!-- Desglose de habilidades -->
-                        <div class="english-skills-breakdown">
-                            <div class="skill-row">
-                                <div class="skill-info">
-                                    <span>📖 <strong>Reading</strong> (Documentación Técnica Avanzada)</span>
-                                    <span class="score-pill c2">C2 Proficient · 75/100</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-bar-fill c2-fill" style="width: 75%;"></div>
-                                </div>
-                            </div>
-
-                            <div class="skill-row">
-                                <div class="skill-info">
-                                    <span>🎧 <strong>Listening</strong> (Comprensión en Reuniones)</span>
-                                    <span class="score-pill b2">B2 Upper · 55/100</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-bar-fill b2-fill" style="width: 55%;"></div>
-                                </div>
-                            </div>
-
-                            <div class="skill-row">
-                                <div class="skill-info">
-                                    <span>✍️ <strong>Writing</strong> (Redacción Técnica & PRs)</span>
-                                    <span class="score-pill b2">B2 Upper · 51/100</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-bar-fill b2-fill" style="width: 51%;"></div>
-                                </div>
-                            </div>
-
-                            <div class="skill-row">
-                                <div class="skill-info">
-                                    <span>🗣️ <strong>Speaking</strong> (Conversación Técnica)</span>
-                                    <span class="score-pill b1">B1 Intermediate · 46/100</span>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="skill-bar-fill b1-fill" style="width: 46%;"></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <a href="https://cert.efset.org/en/BWqZZk" target="_blank" rel="noopener noreferrer" class="btn-cert-link">
-                            <span>Verificar Certificado Oficial en EF SET</span>
-                            <span>↗</span>
-                        </a>
                     </div>
 
                 </div>
@@ -794,156 +448,54 @@
         </section>
 
         <!-- =========================================================
-             6. FOOTER DE CONTACTO (CÓMO CONTACTARME)
+             FOOTER: CONTACTO SENCILLO Y PROFESIONAL
         ========================================================= -->
-        <section class="section section-contact" id="contacto">
-            <div class="container">
-                <div class="section-header">
-                    <div class="badge-tag">📫 Canales Directos</div>
-                    <h2 class="section-title">¿Tienes una propuesta o vacante? <span>Hablemos</span></h2>
-                    <p class="section-desc">
-                        Estoy disponible para incorporarme a equipos como <strong>Backend .NET Developer</strong> o <strong>Full Stack Engineer</strong>. Respondo con prontitud.
-                    </p>
+        <footer class="site-footer" id="contacto">
+            <div class="container footer-box">
+                <div class="footer-cta">
+                    <h2>¿Hablamos de tu próximo proyecto o vacante?</h2>
+                    <p>Estoy disponible para incorporarme a equipos remotos o en Barranquilla, Colombia.</p>
                 </div>
 
-                <div class="contact-grid">
-                    <!-- Canales directos -->
-                    <div class="contact-channels-card">
-                        <h3>Información de Contacto</h3>
-                        <p class="contact-lead">
-                            Puedes escribirme directamente por cualquiera de estos canales o completar el formulario:
-                        </p>
-
-                        <div class="channel-list">
-                            <a href="https://www.linkedin.com/in/juan-jose-maldonado-navarro" target="_blank" rel="noopener noreferrer" class="channel-card">
-                                <div class="channel-icon linkedin">
-                                    <i class="devicon-linkedin-plain colored"></i>
-                                </div>
-                                <div class="channel-text">
-                                    <span>LinkedIn</span>
-                                    <strong>/in/juan-jose-maldonado-navarro ↗</strong>
-                                </div>
-                            </a>
-
-                            <a href="mailto:juanjosemn160@gmail.com" class="channel-card">
-                                <div class="channel-icon email">
-                                    <span>✉️</span>
-                                </div>
-                                <div class="channel-text">
-                                    <span>Correo Electrónico</span>
-                                    <strong>juanjosemn160@gmail.com</strong>
-                                </div>
-                            </a>
-
-                            <a href="https://github.com/juanjo2409" target="_blank" rel="noopener noreferrer" class="channel-card">
-                                <div class="channel-icon github">
-                                    <i class="devicon-github-original"></i>
-                                </div>
-                                <div class="channel-text">
-                                    <span>GitHub</span>
-                                    <strong>github.com/juanjo2409 ↗</strong>
-                                </div>
-                            </a>
-
-                            <div class="channel-card">
-                                <div class="channel-icon location">
-                                    <span>📍</span>
-                                </div>
-                                <div class="channel-text">
-                                    <span>Ubicación</span>
-                                    <strong>Barranquilla, Colombia (Disponible Remoto)</strong>
-                                </div>
-                            </div>
+                <div class="footer-contacts">
+                    <a href="mailto:juanjosemn160@gmail.com" class="contact-card">
+                        <span class="c-icon">✉️</span>
+                        <div>
+                            <small>Correo Electrónico</small>
+                            <strong>juanjosemn160@gmail.com</strong>
                         </div>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/juan-jose-maldonado-navarro" target="_blank" rel="noopener noreferrer" class="contact-card">
+                        <span class="c-icon"><i class="devicon-linkedin-plain colored"></i></span>
+                        <div>
+                            <small>LinkedIn</small>
+                            <strong>Juan José Maldonado ↗</strong>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/juanjo2409" target="_blank" rel="noopener noreferrer" class="contact-card">
+                        <span class="c-icon"><i class="devicon-github-original"></i></span>
+                        <div>
+                            <small>GitHub</small>
+                            <strong>juanjo2409 ↗</strong>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="footer-bottom-bar">
+                    <div class="footer-brand-mini">
+                        <span>&lt;JM /&gt;</span>
+                        <span>juanjo2409</span>
                     </div>
-
-                    <!-- Formulario de contacto -->
-                    <div class="contact-form-card">
-                        <h3>Envíame un Mensaje</h3>
-                        <form class="contact-form" id="contactForm">
-                            <div class="form-field">
-                                <label for="contactName">Tu Nombre o Empresa *</label>
-                                <input type="text" id="contactName" placeholder="Ej: Tech Lead / Empresa de Software" required>
-                            </div>
-
-                            <div class="form-field">
-                                <label for="contactEmail">Correo de Contacto *</label>
-                                <input type="email" id="contactEmail" placeholder="correo@empresa.com" required>
-                            </div>
-
-                            <div class="form-field">
-                                <label for="contactMessage">Mensaje o Propuesta *</label>
-                                <textarea id="contactMessage" placeholder="Hola Juan José, nos interesa tu perfil para una posición de Backend .NET..." rows="4" required></textarea>
-                            </div>
-
-                            <button type="submit" class="btn-submit-message">
-                                <span>Enviar Mensaje</span>
-                                <span>🚀</span>
-                            </button>
-                        </form>
-                    </div>
+                    <p>© 2026 Juan José Maldonado Navarro. Todos los derechos reservados.</p>
+                    <a href="#inicio" class="back-link">↑ Volver arriba</a>
                 </div>
             </div>
-        </section>
+        </footer>
     </main>
 
-    <!-- =========================================================
-         MODAL INTERACTIVO DE ARQUITECTURA
-    ========================================================= -->
-    <div class="project-modal-backdrop" id="projectModal" aria-hidden="true">
-        <div class="project-modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-            <div class="project-modal-header">
-                <div>
-                    <span class="badge-tag" id="modalBadge">Arquitectura del Proyecto</span>
-                    <h3 id="modalTitle">Detalles del Proyecto</h3>
-                </div>
-                <button class="modal-close-btn" id="modalCloseBtn" aria-label="Cerrar ventana">✕</button>
-            </div>
-            <div class="project-modal-body" id="modalBody"></div>
-            <div class="project-modal-footer">
-                <a href="#" target="_blank" rel="noopener noreferrer" class="btn-primary" id="modalRepoLink">
-                    <i class="devicon-github-original"></i>
-                    <span>Ver Código en GitHub</span>
-                </a>
-                <button class="btn-outline" id="modalCloseFooterBtn">Cerrar</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- =========================================================
-         FOOTER ELEGANTE TEMA BLANCO
-    ========================================================= -->
-    <footer class="footer-clean">
-        <div class="container footer-content">
-            <div class="footer-left">
-                <a href="#inicio" class="footer-brand">
-                    <span class="footer-badge">&lt;JM /&gt;</span>
-                    <strong>Juan José Maldonado Navarro</strong>
-                </a>
-                <p>Backend .NET & Full Stack Software Engineer · Barranquilla, Colombia</p>
-            </div>
-
-            <div class="footer-links-row">
-                <a href="#inicio">Inicio</a>
-                <a href="#proyectos">Proyectos</a>
-                <a href="#servicios">Servicios</a>
-                <a href="#trayectoria">Formación</a>
-                <a href="#contacto">Contacto</a>
-                <a href="https://github.com/juanjo2409" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-                <a href="https://www.linkedin.com/in/juan-jose-maldonado-navarro" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-            </div>
-
-            <div class="footer-bottom-copy">
-                <p>© 2026 Juan José Maldonado Navarro. Todos los derechos reservados.</p>
-                <a href="#inicio" class="back-to-top" id="backToTopBtn" title="Volver arriba">↑ Volver arriba</a>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Toast de notificaciones -->
-    <div class="toast-container" id="toastContainer"></div>
-
-    <!-- Scripts -->
+    <!-- Scripts Nativos -->
     <script src="src/js/hambuerguesa.js"></script>
     <script src="src/js/script.js"></script>
 </body>

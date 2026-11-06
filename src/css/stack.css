@@ -1,649 +1,113 @@
 /* =========================================================
-   SERVICIOS, STACK & CREDENCIALES - JUAN JOSÉ MALDONADO NAVARRO
-   TEMA BLANCO (WHITE CLEAN THEME, ELEVATED CARDS & CONTACT FORM)
+   SERVICIOS & ESPECIALIDADES - juanjo2409
+   TEMA BLANCO MINIMALISTA CON MICRO-ANIMACIONES
 ========================================================= */
 
-/* =========================================================
-   1. GRID DE SERVICIOS & ESPECIALIDADES
-========================================================= */
-.services-grid {
+.services-grid-clean {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
-    margin-bottom: 50px;
 }
 
-.service-card {
+.service-box {
     background: #ffffff;
-    border: 1.5px solid var(--border-card);
+    border: 1.5px solid var(--border-light);
     border-radius: var(--radius-xl);
-    padding: 36px;
+    padding: 34px;
     display: flex;
     flex-direction: column;
     box-shadow: var(--shadow-sm);
     transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     position: relative;
-    overflow: hidden;
 }
 
-.service-card:hover {
+.service-box:hover {
     transform: translateY(-6px);
     border-color: #cbd5e1;
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 16px 36px rgba(15, 23, 42, 0.08);
 }
 
-.service-icon-wrapper {
-    width: 58px;
-    height: 58px;
+.service-icon-bubble {
+    width: 54px;
+    height: 54px;
     border-radius: var(--radius-md);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.8rem;
-    margin-bottom: 22px;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
 }
 
-.service-icon-wrapper.purple {
-    background: var(--accent-purple-light);
+.service-box:hover .service-icon-bubble {
+    transform: scale(1.1) rotate(-3deg);
+}
+
+.service-icon-bubble.purple {
+    background: var(--brand-purple-light);
+    color: var(--brand-purple);
     border: 1px solid rgba(124, 58, 237, 0.2);
 }
 
-.service-icon-wrapper.blue {
-    background: var(--primary-light);
+.service-icon-bubble.blue {
+    background: var(--brand-blue-light);
+    color: var(--brand-blue);
     border: 1px solid rgba(37, 99, 235, 0.2);
 }
 
-.service-icon-wrapper.emerald {
-    background: var(--accent-emerald-light);
+.service-icon-bubble.emerald {
+    background: var(--brand-green-light);
+    color: var(--brand-green);
     border: 1px solid rgba(5, 150, 105, 0.2);
 }
 
-.service-icon-wrapper.orange {
-    background: var(--accent-amber-light);
+.service-icon-bubble.orange {
+    background: #fffbeb;
+    color: #d97706;
     border: 1px solid rgba(217, 119, 6, 0.2);
 }
 
-.service-card h3 {
+.service-box h3 {
     font-size: 1.35rem;
     font-weight: 800;
-    color: var(--text-primary);
+    color: var(--text-main);
     margin-bottom: 12px;
-    line-height: 1.3;
 }
 
-.service-card p {
-    color: var(--text-secondary);
+.service-box p {
     font-size: 0.98rem;
     line-height: 1.7;
-    margin-bottom: 20px;
+    color: var(--text-muted);
+    margin-bottom: 22px;
 }
 
-.service-bullets {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 24px;
+.service-box strong {
+    color: var(--text-main);
 }
 
-.service-bullets li {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    position: relative;
-    padding-left: 20px;
-    line-height: 1.5;
-}
-
-.service-bullets li::before {
-    content: "•";
-    position: absolute;
-    left: 4px;
-    color: var(--primary);
-    font-size: 1.4rem;
-    line-height: 1;
-}
-
-.service-tags {
+.service-chips {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
     margin-top: auto;
-    padding-top: 20px;
-    border-top: 1px solid var(--border-subtle);
+    padding-top: 18px;
+    border-top: 1px solid var(--border-light);
 }
 
-.s-tag {
-    font-family: var(--font-mono);
+.service-chips span {
+    font-family: var(--font-code);
     font-size: 0.78rem;
     font-weight: 600;
     padding: 4px 10px;
-    background: var(--bg-surface);
-    border: 1px solid var(--border-card);
+    background: var(--bg-subtle);
+    border: 1px solid var(--border-light);
     border-radius: var(--radius-sm);
-    color: var(--text-secondary);
-}
-
-/* =========================================================
-   2. VISOR INTERACTIVO DE CLEAN ARCHITECTURE
-========================================================= */
-.arch-showcase-box {
-    background: #ffffff;
-    border: 1.5px solid var(--border-card);
-    border-radius: var(--radius-xl);
-    padding: 40px;
-    box-shadow: var(--shadow-md);
-}
-
-.arch-box-header {
-    text-align: center;
-    max-width: 640px;
-    margin: 0 auto 35px;
-}
-
-.arch-badge {
-    display: inline-block;
-    padding: 4px 12px;
-    font-size: 0.75rem;
-    font-family: var(--font-mono);
-    font-weight: 700;
-    border-radius: var(--radius-full);
-    background: var(--primary-light);
-    color: var(--primary);
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-}
-
-.arch-box-header h3 {
-    font-size: 1.6rem;
-    font-weight: 800;
-    color: var(--text-primary);
-    margin-bottom: 6px;
-}
-
-.arch-box-header p {
     color: var(--text-muted);
-    font-size: 0.95rem;
-}
-
-.arch-box-content {
-    display: grid;
-    grid-template-columns: 1fr 1.35fr;
-    gap: 32px;
-    align-items: start;
-}
-
-.arch-layer-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.layer-pill {
-    padding: 16px 20px;
-    background: var(--bg-surface);
-    border: 1.5px solid var(--border-card);
-    border-radius: var(--radius-md);
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    transition: all 0.25s ease;
-    cursor: pointer;
-}
-
-.layer-pill strong {
-    font-size: 1rem;
-    color: var(--text-primary);
-}
-
-.layer-pill span {
-    font-size: 0.82rem;
-    color: var(--text-muted);
-}
-
-.layer-pill:hover {
-    border-color: var(--primary);
-    background: #ffffff;
-    transform: translateX(4px);
-}
-
-.layer-pill.active {
-    background: #ffffff;
-    border-color: var(--primary);
-    box-shadow: 0 4px 18px rgba(37, 99, 235, 0.18);
-    transform: translateX(8px);
-}
-
-.layer-pill.active strong {
-    color: var(--primary);
-}
-
-.arch-layer-detail {
-    background: var(--bg-surface);
-    border: 1px solid var(--border-card);
-    border-radius: var(--radius-lg);
-    padding: 28px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.detail-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid var(--border-subtle);
-    padding-bottom: 14px;
-}
-
-.detail-header h4 {
-    font-size: 1.25rem;
-    font-weight: 800;
-    color: var(--text-primary);
-}
-
-.rule-badge {
-    font-size: 0.76rem;
-    font-family: var(--font-mono);
-    font-weight: 700;
-    background: var(--accent-emerald-light);
-    color: #047857;
-    padding: 4px 10px;
-    border-radius: var(--radius-full);
-}
-
-.detail-folders {
-    background: #ffffff;
-    border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-sm);
-    padding: 14px 18px;
-    font-family: var(--font-mono);
-    font-size: 0.86rem;
-}
-
-.detail-folders ul {
-    list-style: none;
-    margin-top: 8px;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    color: var(--text-secondary);
-}
-
-.detail-principles {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    font-family: var(--font-mono);
-    font-size: 0.78rem;
-    font-weight: 600;
-    color: var(--primary);
-}
-
-/* =========================================================
-   3. CREDENCIALES, FORMACIÓN & INGLÉS EF SET B2
-========================================================= */
-.credentials-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 32px;
-}
-
-.cred-card {
-    background: #ffffff;
-    border: 1.5px solid var(--border-card);
-    border-radius: var(--radius-xl);
-    padding: 38px;
-    box-shadow: var(--shadow-sm);
-}
-
-.cred-card-title {
-    font-size: 1.45rem;
-    font-weight: 800;
-    color: var(--text-primary);
-    margin-bottom: 26px;
-}
-
-/* Timeline limpia */
-.timeline-clean {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    position: relative;
-    padding-left: 20px;
-    border-left: 2px solid var(--border-subtle);
-}
-
-.timeline-step {
-    position: relative;
-}
-
-.step-dot {
-    position: absolute;
-    left: -27px;
-    top: 4px;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: #ffffff;
-    border: 3px solid var(--primary);
-}
-
-.step-dot.purple { border-color: var(--accent-purple); }
-.step-dot.blue { border-color: var(--primary); }
-.step-dot.emerald { border-color: var(--accent-emerald); }
-
-.step-time {
-    display: inline-block;
-    font-size: 0.75rem;
-    font-family: var(--font-mono);
-    font-weight: 700;
-    color: var(--primary);
-    background: var(--primary-light);
-    padding: 3px 8px;
-    border-radius: var(--radius-full);
-    margin-bottom: 6px;
-}
-
-.step-body h4 {
-    font-size: 1.1rem;
-    font-weight: 800;
-    color: var(--text-primary);
-    margin-bottom: 6px;
-}
-
-.step-body p {
-    color: var(--text-secondary);
-    font-size: 0.92rem;
-    line-height: 1.6;
-}
-
-/* Tarjeta EF SET */
-.english-card {
-    background: linear-gradient(180deg, #ffffff 0%, #faf5ff 100%);
-    border-color: rgba(124, 58, 237, 0.25);
-}
-
-.english-badge-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 18px;
-}
-
-.cert-status-pill {
-    font-size: 0.8rem;
-    font-weight: 700;
-    color: var(--accent-purple);
-    background: var(--accent-purple-light);
-    padding: 4px 12px;
-    border-radius: var(--radius-full);
-}
-
-.efset-grade-badge {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #7c3aed, #6d28d9);
-    color: #ffffff;
-    box-shadow: 0 4px 14px rgba(124, 58, 237, 0.35);
-}
-
-.efset-grade-badge strong {
-    font-size: 1.3rem;
-    line-height: 1;
-}
-
-.efset-grade-badge span {
-    font-size: 0.55rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.english-overall {
-    font-size: 1.15rem;
-    color: var(--text-primary);
-    margin-bottom: 8px;
-}
-
-.english-summary {
-    color: var(--text-secondary);
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 24px;
-}
-
-.english-skills-breakdown {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    margin-bottom: 28px;
-}
-
-.skill-row {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-
-.skill-info {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.88rem;
-    color: var(--text-secondary);
-}
-
-.score-pill {
-    font-family: var(--font-mono);
-    font-size: 0.76rem;
-    font-weight: 700;
-    padding: 2px 8px;
-    border-radius: var(--radius-full);
-}
-
-.score-pill.c2 { background: #f5f3ff; color: #6d28d9; border: 1px solid rgba(124, 58, 237, 0.3); }
-.score-pill.b2 { background: #eff6ff; color: #1d4ed8; border: 1px solid rgba(37, 99, 235, 0.3); }
-.score-pill.b1 { background: #ecfdf5; color: #047857; border: 1px solid rgba(5, 150, 105, 0.3); }
-
-.skill-bar {
-    width: 100%;
-    height: 8px;
-    background: #e2e8f0;
-    border-radius: var(--radius-full);
-    overflow: hidden;
-}
-
-.skill-bar-fill {
-    height: 100%;
-    border-radius: var(--radius-full);
-    transition: width 1s ease-in-out;
-}
-
-.c2-fill { background: linear-gradient(90deg, #7c3aed, #a855f7); }
-.b2-fill { background: linear-gradient(90deg, #2563eb, #60a5fa); }
-.b1-fill { background: linear-gradient(90deg, #059669, #34d399); }
-
-.btn-cert-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 12px 20px;
-    background: #ffffff;
-    border: 1.5px solid rgba(124, 58, 237, 0.4);
-    color: var(--accent-purple);
-    font-weight: 700;
-    font-size: 0.9rem;
-    border-radius: var(--radius-md);
-    transition: all 0.25s ease;
-}
-
-.btn-cert-link:hover {
-    background: var(--accent-purple);
-    color: #ffffff;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
-}
-
-/* =========================================================
-   4. CANALES DE CONTACTO & FORMULARIO
-========================================================= */
-.contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.15fr;
-    gap: 36px;
-    align-items: start;
-}
-
-.contact-channels-card,
-.contact-form-card {
-    background: #ffffff;
-    border: 1.5px solid var(--border-card);
-    border-radius: var(--radius-xl);
-    padding: 38px;
-    box-shadow: var(--shadow-sm);
-}
-
-.contact-channels-card h3,
-.contact-form-card h3 {
-    font-size: 1.45rem;
-    font-weight: 800;
-    color: var(--text-primary);
-    margin-bottom: 12px;
-}
-
-.contact-lead {
-    color: var(--text-secondary);
-    font-size: 0.98rem;
-    line-height: 1.65;
-    margin-bottom: 24px;
-}
-
-.channel-list {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-}
-
-.channel-card {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    padding: 14px 18px;
-    background: var(--bg-surface);
-    border: 1.5px solid var(--border-subtle);
-    border-radius: var(--radius-md);
-    transition: all 0.25s ease;
-}
-
-.channel-card:hover {
-    border-color: var(--primary);
-    background: #ffffff;
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-sm);
-}
-
-.channel-icon {
-    width: 44px;
-    height: 44px;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.4rem;
-    background: #ffffff;
-    border: 1px solid var(--border-subtle);
-    flex-shrink: 0;
-}
-
-.channel-text {
-    display: flex;
-    flex-direction: column;
-}
-
-.channel-text span {
-    font-size: 0.78rem;
-    color: var(--text-muted);
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.channel-text strong {
-    font-size: 0.95rem;
-    color: var(--text-primary);
-}
-
-/* Formulario */
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-}
-
-.form-field {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-
-.form-field label {
-    font-size: 0.88rem;
-    font-weight: 700;
-    color: var(--text-primary);
-}
-
-.form-field input,
-.form-field textarea {
-    width: 100%;
-    padding: 13px 16px;
-    background: var(--bg-surface);
-    border: 1.5px solid var(--border-card);
-    border-radius: var(--radius-sm);
-    color: var(--text-primary);
-    font-family: var(--font-sans);
-    font-size: 0.95rem;
-    transition: all 0.2s ease;
-}
-
-.form-field input:focus,
-.form-field textarea:focus {
-    outline: none;
-    border-color: var(--primary);
-    background: #ffffff;
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
-}
-
-.btn-submit-message {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 14px 28px;
-    background: linear-gradient(135deg, #2563eb, #1d4ed8);
-    color: #ffffff;
-    font-weight: 700;
-    font-size: 1rem;
-    border-radius: var(--radius-sm);
-    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.35);
-    transition: all 0.25s ease;
-    margin-top: 8px;
-}
-
-.btn-submit-message:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 22px rgba(37, 99, 235, 0.45);
 }
 
 /* RESPONSIVE */
-@media (max-width: 900px) {
-    .services-grid,
-    .credentials-grid,
-    .contact-grid,
-    .arch-box-content {
+@media (max-width: 860px) {
+    .services-grid-clean {
         grid-template-columns: 1fr;
     }
 }
