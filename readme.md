@@ -1,69 +1,47 @@
-# Juan José Maldonado | Full Stack Developer Portfolio
+# Juan José Maldonado Navarro | Full Stack & Backend .NET Portfolio
 
-Bienvenido a mi sitio web y portafolio profesional en GitHub Pages.  
-Diseñado y desarrollado con **CSS3 nativo** y **JavaScript vanilla** sin dependencias ni frameworks SPA para garantizar un rendimiento óptimo, velocidad de carga instantánea y una presentación técnica de alto impacto para reclutadores y líderes de ingeniería.
-
-## 🌐 Demo en Vivo
+Repositorio del portafolio profesional en vivo alojado en GitHub Pages:  
 🔗 **[https://juanjo2409.github.io](https://juanjo2409.github.io)**
 
 ---
 
-## ⚡ Core Stack Principal
+## 🎨 Arquitectura & Diseño Visual
 
-### 🟣 Backend (.NET Ecosystem)
-- **Framework:** ASP.NET Core Web API (.NET 8 / .NET 9 con C# moderno).
-- **Arquitectura:** Clean Architecture (separación estricta de responsabilidades: *Domain* con entidades puras, *Application*, *Infrastructure* y *Presentation/API*, con carpetas dedicadas para `errors`, `exceptions` y `value objects`).
-- **Patrones y Principios:** SOLID, Repository Pattern, Dependency Injection (IoC Container nativo).
-- **Autenticación & Seguridad:** ASP.NET Core Identity y JSON Web Tokens (JWT) con claims y roles.
-- **Bases de Datos & ORM:** PostgreSQL y Entity Framework Core (EF Core) con consultas optimizadas y migraciones Code-First.
+El portafolio fue rediseñado bajo un estándar editorial blanco (**Clean White Theme**) enfocado en reclutadores y líderes técnicos:
 
-### ☁️ Cloud & DevOps (Microsoft Azure)
-- **Cómputo & Hosting:** Azure App Services, Deployment Slots y Azure Container Apps (Docker).
-- **Seguridad en Nube:** Azure Key Vault con Managed Identities y protección de secretos.
-- **Persistencia Cloud:** Azure Database for PostgreSQL y Azure Blob Storage con SAS Tokens.
-- **CI/CD:** Automatización de compilación, tests y despliegues con GitHub Actions y Azure DevOps.
-
-### 🔴 Frontend Moderno (Especialidad Angular & React)
-- **Angular (Enterprise):** TypeScript estricto, arquitectura orientada a servicios, programación reactiva con observables de RxJS y Angular Signals.
-- **React (con TypeScript):** Interfaces reactivas tipadas, componentes modulares y Custom Hooks.
-- **Estilos & UI:** Tailwind CSS y CSS3 nativo para sistemas de diseño limpios, responsivos y con modo oscuro.
-
----
-
-## 📂 Estructura del Proyecto
-
-```text
-juanjo2409.github.io/
-├── index.html              # Página principal (Hero, Sobre mí, Core Stack, Proyectos, Contacto, Footer)
-├── mascotas.html           # Subpágina interactiva de galería de mascotas
-├── readme.md               # Documentación profesional del repositorio
-├── public/                 # Recursos multimedia e imágenes
-│   └── img/                # Avatar e imágenes de proyectos/mascotas
-└── src/
-    ├── css/
-    │   ├── styles.css      # Sistema de diseño, variables, tipografía, hero y footer
-    │   ├── menu.css        # Navbar moderno sticky glassmorphism y menú móvil
-    │   ├── stack.css       # Estilos del Core Stack, explorer interactivo y visor de blueprint
-    │   ├── proyectos.css   # Cards del portafolio con efectos hover
-    │   └── mascotas.css    # Estilos de la galería de mascotas
-    └── js/
-        ├── hambuerguesa.js # Control de menú responsive móvil y scroll navbar
-        └── script.js       # Interactividad del Stack, capas de Clean Architecture, visor de código y toast
-```
+1. **Inicio / Hero Section:**
+   - Presentación ejecutiva a la izquierda con efecto *Typewriter* interactivo y contadores de métricas de código.
+   - Fotografía profesional a la derecha con anillos orbitales giratorios en CSS nativo y tarjetas flotantes 3D de tecnologías clave (.NET, PostgreSQL, Docker y certificación EF SET B2).
+   - *Marquee* infinito continuo con logos oficiales en color.
+2. **Proyectos:**
+   - Casos de estudio de ingeniería reales (**FrameRent**, **SkillHub**, **PsicoBitácoras** en producción, etc.).
+   - Filtros dinámicos por categoría (Backend .NET, Full Stack, Otros).
+   - Modal interactivo para inspeccionar arquitectura y reglas de dominio de cada proyecto.
+3. **Servicios & Especialidades:**
+   - Arquitectura de Software & Clean Architecture (4 capas estrictas, DDD, SOLID).
+   - Backend .NET & APIs RESTful (ASP.NET Core Web API, EF Core, PostgreSQL, JWT).
+   - Frontend Moderno (React, Angular, TypeScript, Tailwind CSS v4).
+   - DevOps, Contenedores & Cloud (Docker Compose, Azure, GitHub Actions).
+   - Explorador interactivo de Clean Architecture en vivo.
+4. **Trayectoria & Certificación B2:**
+   - Formación en **SENA** (ADSO) y **Riwi** (Clan C#, Cohort 5).
+   - Certificado Oficial de Inglés **EF SET B2 (Reading C2 Proficient - 75/100)** con barras de progreso de habilidades.
+5. **Footer & Contacto:**
+   - Canales directos (LinkedIn, Email, GitHub, Ubicación en Barranquilla).
+   - Formulario de contacto interactivo con notificaciones *Toast*.
 
 ---
 
-## ✨ Características Destacadas
+## 🛠️ Tecnologías Empleadas
 
-- 💎 **Header & Footer Rediseñados:** Navegación sticky con efecto vidrio esmerilado (*glassmorphism*), botón CTA para contacto directo, menú móvil animado y pie de página informativo con enlaces y pilares técnicos.
-- 🏛️ **Explorador Interactivo de Clean Architecture:** Visualizador interactivo que permite explorar las 4 capas (*Domain*, *Application*, *Infrastructure*, *Presentation*) y sus carpetas dedicadas.
-- 📋 **Visor de Blueprints con Copiado al Portapapeles:** Muestra estructuras de código en tiempo real con notificaciones *Toast* interactivas.
-- 📱 **100% Responsivo & Mobile-First:** Diseñado para adaptarse con fluidez desde dispositivos móviles hasta monitores ultrawide.
-- 🚀 **Tecnología Nativa:** Cero dependencias externas pesadas, carga ultrarrápida en GitHub Pages.
+- **HTML5 Semántico & CSS3 Nativo:** Maquetación responsiva, CSS Grid, Flexbox, variables CSS y animaciones fluidas sin dependencias externas pesadas.
+- **Vanilla JavaScript:** Control del menú responsive, filtros, modal de proyectos, Typewriter y explorador de capas.
+- **Devicon & Google Fonts:** Iconografía oficial y tipografías *Plus Jakarta Sans* y *JetBrains Mono*.
 
 ---
 
 ## 📬 Contacto Profesional
 
-- **GitHub:** [https://github.com/juanjo2409](https://github.com/juanjo2409)
-- **Portafolio:** [https://juanjo2409.github.io](https://juanjo2409.github.io)
+- **Portafolio en Vivo:** [https://juanjo2409.github.io](https://juanjo2409.github.io)
+- **LinkedIn:** [https://www.linkedin.com/in/juan-jose-maldonado-navarro](https://www.linkedin.com/in/juan-jose-maldonado-navarro)
+- **Email:** [juanjosemn160@gmail.com](mailto:juanjosemn160@gmail.com)

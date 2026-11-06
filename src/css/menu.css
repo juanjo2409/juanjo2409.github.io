@@ -1,6 +1,6 @@
 /* =========================================================
-   HEADER & NAVBAR MODERNO - JUAN JOSÉ MALDONADO
-   CSS Nativo - Glassmorphism, Sticky & Mobile First
+   HEADER & NAVBAR MODERNO - JUAN JOSÉ MALDONADO NAVARRO
+   TEMA BLANCO (WHITE GLASSMORPHISM & RESPONSIVE MOBILE)
 ========================================================= */
 
 .navbar-container {
@@ -9,17 +9,17 @@
     left: 0;
     width: 100%;
     z-index: 1000;
-    background: rgba(7, 13, 30, 0.85);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(226, 232, 240, 0.8);
     transition: background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .navbar-container.scrolled {
-    background: rgba(5, 10, 24, 0.95);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
-    border-bottom-color: rgba(56, 189, 248, 0.2);
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.08);
+    border-bottom-color: #cbd5e1;
 }
 
 .navbar {
@@ -46,20 +46,20 @@
     justify-content: center;
     width: 44px;
     height: 44px;
-    background: linear-gradient(135deg, rgba(56, 189, 248, 0.2) 0%, rgba(139, 92, 246, 0.25) 100%);
-    border: 1px solid rgba(56, 189, 248, 0.4);
+    background: linear-gradient(135deg, var(--primary-light) 0%, #f5f3ff 100%);
+    border: 1.5px solid rgba(37, 99, 235, 0.3);
     border-radius: 12px;
     color: var(--primary);
     font-family: var(--font-mono);
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     font-weight: 800;
-    box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: var(--shadow-xs);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .brand:hover .brand-badge {
-    transform: scale(1.08) rotate(-2deg);
-    box-shadow: 0 0 25px rgba(56, 189, 248, 0.45);
+    transform: scale(1.06) rotate(-2deg);
+    box-shadow: 0 6px 18px rgba(37, 99, 235, 0.25);
     border-color: var(--primary);
 }
 
@@ -72,7 +72,7 @@
     font-size: 1.05rem;
     font-weight: 800;
     letter-spacing: -0.01em;
-    color: #ffffff;
+    color: var(--text-primary);
     line-height: 1.2;
 }
 
@@ -81,21 +81,20 @@
     align-items: center;
     gap: 6px;
     font-size: 0.75rem;
-    color: #34d399;
+    color: #059669;
     font-weight: 600;
-    letter-spacing: 0.5px;
 }
 
 .brand-status-dot {
     width: 6px;
     height: 6px;
-    background: #34d399;
+    background: #10b981;
     border-radius: 50%;
-    box-shadow: 0 0 8px #34d399;
-    animation: statusPulse 2s infinite;
+    box-shadow: 0 0 6px #10b981;
+    animation: pulseDot 2s infinite;
 }
 
-@keyframes statusPulse {
+@keyframes pulseDot {
     0%, 100% { opacity: 1; transform: scale(1); }
     50% { opacity: 0.4; transform: scale(0.85); }
 }
@@ -104,7 +103,7 @@
 .nav-menu {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
     list-style: none;
 }
 
@@ -113,33 +112,38 @@
     align-items: center;
     gap: 6px;
     padding: 8px 16px;
-    font-size: 0.95rem;
+    font-size: 0.94rem;
     font-weight: 600;
     color: var(--text-secondary);
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: var(--radius-sm);
     transition: color 0.2s ease, background 0.2s ease;
     position: relative;
 }
 
 .nav-link:hover {
-    color: #ffffff;
-    background: rgba(255, 255, 255, 0.05);
+    color: var(--primary);
+    background: var(--primary-light);
 }
 
 .nav-link.active {
     color: var(--primary);
+    background: rgba(37, 99, 235, 0.08);
 }
 
-/* Badge especial para el Core Stack en el menú */
+.nav-link i {
+    font-size: 1.1rem;
+}
+
+/* Badge en el menú */
 .nav-link-badge {
     font-size: 0.65rem;
     font-family: var(--font-mono);
     font-weight: 700;
     padding: 2px 6px;
-    background: linear-gradient(135deg, rgba(139, 92, 246, 0.3), rgba(56, 189, 248, 0.3));
-    border: 1px solid rgba(56, 189, 248, 0.4);
-    border-radius: 9999px;
+    background: var(--primary-light);
+    border: 1px solid rgba(37, 99, 235, 0.3);
+    border-radius: var(--radius-full);
     color: var(--primary);
     text-transform: uppercase;
 }
@@ -154,20 +158,17 @@
     font-size: 0.9rem;
     font-weight: 700;
     color: #ffffff;
-    background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(139, 92, 246, 0.3));
-    border: 1px solid rgba(56, 189, 248, 0.4);
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
     border-radius: 10px;
     text-decoration: none;
-    box-shadow: 0 4px 15px rgba(56, 189, 248, 0.15);
+    box-shadow: 0 3px 12px rgba(37, 99, 235, 0.3);
     transition: all 0.3s ease;
 }
 
 .nav-cta:hover {
-    background: linear-gradient(135deg, #38bdf8, #2563eb);
-    border-color: #38bdf8;
-    color: #ffffff;
+    background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(56, 189, 248, 0.35);
+    box-shadow: 0 6px 18px rgba(37, 99, 235, 0.4);
 }
 
 /* BOTÓN HAMBURGUESA (MÓVIL) */
@@ -175,8 +176,8 @@
     display: none;
     flex-direction: column;
     justify-content: space-between;
-    width: 32px;
-    height: 24px;
+    width: 30px;
+    height: 22px;
     background: transparent;
     border: none;
     cursor: pointer;
@@ -187,14 +188,14 @@
 .hamburger span {
     display: block;
     width: 100%;
-    height: 3px;
-    background: #ffffff;
+    height: 2.5px;
+    background: var(--text-primary);
     border-radius: 4px;
     transition: transform 0.3s ease, opacity 0.3s ease, background 0.3s ease;
 }
 
 .hamburger.is-active span:nth-child(1) {
-    transform: translateY(10.5px) rotate(45deg);
+    transform: translateY(9.5px) rotate(45deg);
     background: var(--primary);
 }
 
@@ -203,7 +204,7 @@
 }
 
 .hamburger.is-active span:nth-child(3) {
-    transform: translateY(-10.5px) rotate(-45deg);
+    transform: translateY(-9.5px) rotate(-45deg);
     background: var(--primary);
 }
 
@@ -212,7 +213,7 @@
     display: none;
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(15, 23, 42, 0.4);
     backdrop-filter: blur(4px);
     z-index: 998;
     opacity: 0;
@@ -237,10 +238,9 @@
         width: 82%;
         max-width: 340px;
         height: calc(100vh - 76px);
-        background: rgba(10, 18, 42, 0.98);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        border-left: 1px solid rgba(56, 189, 248, 0.2);
+        background: #ffffff;
+        border-left: 1px solid var(--border-subtle);
+        box-shadow: -15px 0 35px rgba(15, 23, 42, 0.12);
         padding: 30px 24px;
         flex-direction: column;
         align-items: stretch;
@@ -253,21 +253,20 @@
 
     .nav-menu.is-active {
         transform: translateX(0);
-        box-shadow: -15px 0 35px rgba(0, 0, 0, 0.6);
     }
 
     .nav-link {
-        font-size: 1.1rem;
-        padding: 14px 16px;
-        border-radius: 10px;
-        border: 1px solid rgba(255, 255, 255, 0.05);
-        background: rgba(255, 255, 255, 0.02);
+        font-size: 1.05rem;
+        padding: 13px 16px;
+        border-radius: var(--radius-sm);
+        border: 1px solid var(--border-subtle);
+        background: var(--bg-surface);
     }
 
     .nav-link:hover,
     .nav-link:focus {
-        background: rgba(56, 189, 248, 0.1);
-        border-color: rgba(56, 189, 248, 0.3);
+        background: var(--primary-light);
+        border-color: rgba(37, 99, 235, 0.3);
     }
 
     .nav-cta {
@@ -275,7 +274,7 @@
         margin-top: 10px;
         text-align: center;
         justify-content: center;
-        padding: 14px;
+        padding: 13px;
         font-size: 1rem;
     }
 }
